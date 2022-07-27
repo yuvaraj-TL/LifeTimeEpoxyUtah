@@ -1,0 +1,130 @@
+deal_data = zoho.crm.getRecordById("Deals",deal_id);
+get_contact = deal_data.get("Contact_Name");
+if(deal_data.get("Stage") == "Scheduled")
+{
+	data_map = Map();
+	data_map.put("Deal_Name",deal_data.get("Deal_Name"));
+	data_map.put("Client_Id",get_contact.get("id"));
+	data_map.put("Email",deal_data.get("Email"));
+	data_map.put("Phone_Number",deal_data.get("Phone"));
+	data_map.put("Closing_Date",deal_data.get("Closing_Date").toString("dd-MMMM-yyyy"));
+	data_map.put("Start_Date",deal_data.get("Start_Date").toString("dd-MMMM-yyyy"));
+	data_map.put("Installation_Crew",deal_data.get("Installation_Crew"));
+	data_map.put("Flake_Color",deal_data.get("Flake_Color"));
+	data_map.put("Floor_Sq_Ft",deal_data.get("Floor_Sq_Ft"));
+	data_map.put("Stem_Walls_Stairs_Sq_Ft",deal_data.get("Stem_Walls_Stairs_Sq_Ft"));
+	data_map.put("Additional_Job_Notes",deal_data.get("Additional_Job_Notes"));
+	data_map.put("Stopping_at_the_garage",deal_data.get("Stopping_at_the_garage"));
+	// 	data_map.put("district_city",deal_data.get("City"));
+	// 	data_map.put("state_province",deal_data.get("State"));
+	data_map.put("Books_Id",deal_id);
+	Address_map = Map();
+	Address_map.put("district_city",deal_data.get("City"));
+	Address_map.put("address_line_1",deal_data.get("Street"));
+	Address_map.put("state_province",deal_data.get("State"));
+	Address_map.put("postal_Code",deal_data.get("Zip"));
+	data_map.put("Address",Address_map);
+	info data_map;
+	resp_search = zoho.books.getRecords("Estimates","772006612","zcrm_potential_id=" + deal_id + "","deals_connector");
+	get_ets = resp_search.get("estimates");
+	for each  rec_id in get_ets
+	{
+		id = rec_id.get("estimate_id");
+	}
+	resp = zoho.books.getRecordsByID("Estimates","772006612",id,"deals_connector");
+	if(resp != null)
+	{
+		ets_resp = resp.get("estimate");
+		custom_id = ets_resp.get("zcrm_potential_id");
+		// 					est_id_map = Map();
+		// 					est_id_map.put("ETS_Id","5169338000003963072");
+		// 					response = zoho.crm.updateRecord("Deals",deal_id,est_id_map);
+		// 					info response;
+		line_items = List();
+		is_combo_product_list = List();
+		li_items = ets_resp.get("line_items");
+		for each  li_list in li_items
+		{
+			item_id = li_list.get("item_id");
+			get_rec = zoho.books.getRecordsByID("Items","772006612",item_id,"deals_connector");
+			get_item = get_rec.get("item");
+			product_map = Map();
+			product_map.put("Product_Name",get_item.get("name"));
+			product_map.put("SKU",get_item.get("sku"));
+			product_map.put("Cost_Price",get_item.get("sales_rate"));
+			product_map.put("Description",get_item.get("description"));
+			product_map.put("Unit",get_item.get("unit"));
+			product_map.put("Books_Id",get_item.get("item_id"));
+			other_product = Map();
+			Search_rec_item = zoho.creator.getRecords("lifetimeepoxyutah","fms-app","All_Products","Books_Id == \"" + item_id + "\"",1,200,"creator");
+			creator_resp = Search_rec_item.get("data");
+			for each  li_creator_id in creator_resp
+			{
+				creator_product_id = li_creator_id.get("ID");
+			}
+			update_product = zoho.creator.updateRecord("lifetimeepoxyutah","fms-app","All_Products",creator_product_id,product_map,other_product,"creator");
+			info update_product;
+			if(get_item.get("is_combo_product") == "true")
+			{
+				combo_map = Map();
+				combo_map.put("Composite_Items_Name",get_item.get("name"));
+				combo_map.put("SKU",get_item.get("sku"));
+				combo_map.put("Sales_Price",get_item.get("sales_rate"));
+				combo_map.put("Cost_Price",get_item.get("purchase_rate"));
+				combo_map.put("Sales_Account",get_item.get("account_name"));
+				combo_map.put("Purchase_Account",get_item.get("purchase_account_name"));
+				combo_map.put("Description",get_item.get("description"));
+				combo_map.put("Unit",get_item.get("unit"));
+				combo_map.put("Books_id",get_item.get("item_id"));
+				combo_product = Map();
+				Search_rec_comboitem = zoho.creator.getRecords("lifetimeepoxyutah","fms-app","All_Composite_Items","Books_id == \"" + item_id + "\"",1,200,"creator");
+				creator_combo_resp = Search_rec_comboitem.get("data");
+				for each  creator_comboitem_id in creator_combo_resp
+				{
+					creator_Comboproduct_id = creator_comboitem_id.get("ID");
+				}
+				update_Comboproduct = zoho.creator.updateRecord("lifetimeepoxyutah","fms-app","All_Composite_Items",creator_Comboproduct_id,combo_map,combo_product,"creator");
+				info update_Comboproduct;
+				combo_product_resp = zoho.books.getRecordsByID("compositeitems","772006612",item_id,"deals_connector");
+				get_composite_item = combo_product_resp.get("composite_item");
+				get_mapped_items = get_composite_item.get("mapped_items");
+				for each  li_combo_list in get_mapped_items
+				{
+					qty = li_list.get("quantity");
+					if(get_composite_item.get("composite_item_id") == li_list.get("item_id"))
+					{
+						tot_cal = qty * li_combo_list.get("quantity");
+						info tot_cal.round(1);
+					}
+					id = li_combo_list.get("item_id");
+					is_combo_product = Map();
+					is_combo_product.put("Combo_Item_Id",get_composite_item.get("composite_item_id"));
+					is_combo_product.put("Product_Id",li_combo_list.get("item_id"));
+					is_combo_product.put("Sqft",li_combo_list.get("quantity"));
+					is_combo_product.put("Rate",li_combo_list.get("rate"));
+					is_combo_product.put("Amount",tot_cal.round(1));
+					is_combo_product_list.add(is_combo_product);
+				}
+			}
+			item_map = Map();
+			item_map.put("Item_Id",li_list.get("item_id"));
+			item_map.put("Sqft",li_list.get("quantity"));
+			item_map.put("Rate",li_list.get("rate"));
+			item_map.put("Total_Value",li_list.get("item_total"));
+			line_items.add(item_map);
+		}
+		data_map.put("Line_Items",line_items);
+		data_map.put("Associated_Items",is_combo_product_list);
+	}
+	deal_map = data_map;
+	other_map = Map();
+	Search_rec_job = zoho.creator.getRecords("lifetimeepoxyutah","fms-app","All_Jobs","Books_Id == \"" + deal_id + "\"",1,200,"creator");
+	info Search_rec_job;
+	creator_job_resp = Search_rec_job.get("data");
+	for each  creator_job_id in creator_job_resp
+	{
+		creator_jobid = creator_job_id.get("ID");
+	}
+	update_job_rec = zoho.creator.updateRecord("lifetimeepoxyutah","fms-app","All_Jobs",creator_jobid,deal_map,other_map,"creator");
+	info update_job_rec;
+}
