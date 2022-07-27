@@ -1,6 +1,6 @@
 /*
  * Author       : lifetimeepoxyutah
- * Generated on : 20-Jun-2022 11:00:23
+ * Generated on : 27-Jul-2022 06:03:52
  * Version      : 1.0
  */
  application "LIFETIME EPOXY FSM"
@@ -130,15 +130,6 @@
 	{
 		displayname= "Home"
 		icon = "business-board-30"
-				 page Time_Tracker1 
-	 	 { 
- 	 	 displayname = "Time Tracker"
-
- 	 	 icon = "users-2-a-time" 
-
- 	 	 hide =  true
-	 	 Content="<zml    \n\t\t\tisPdfEnabled='false'\n\t\t\n\t\t\tisPrintEnabled='false'\n\t\t\n\t\t\n\t\t\n\t\t\n>\n\t<layout>\n\t<row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<widgets importedTemplate='true'\/>\n<\/column>\n<\/row>\n<\/layout>\n<\/zml>" 
- 	 	}
 				 page Time_Tracker 
 	 	 { 
  	 	 displayname = "Time Tracker"
@@ -148,21 +139,19 @@
  	 	 hide =  true
 	 	 Content="<zml    \n\t\t\tisPdfEnabled='false'\n\t\t\n\t\t\tisPrintEnabled='false'\n\t\t\n\t\t\n\t\t\n\t\t\n>\n\t<layout>\n\t<row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<dsp id='html_snippet' bgColor=\"#FFFFFF\" \n>\n\t<![CDATA[htmlpage html_snippet()\ncontent\n&lt;%{\n\tcurrent_user = zoho.loginuser;\n\topenUrl(&quot;#Page:Time_Tracker_Widget?email=&quot; + current_user,&quot;same window&quot;);\n\n}%&gt;]]>\n<\/dsp>\n<\/column>\n<\/row>\n<\/layout>\n<\/zml>" 
  	 	}
-				 page Time_Tracker_Widget(email) 
-	 	 { 
- 	 	 displayname = "Time Tracker Widget"
-
- 	 	 icon = "tech-2-p-system-update" 
-
- 	 	 hide =  true
-	 	 Content="<zml    \n\t\t\tisPdfEnabled='false'\n\t\t\n\t\t\tisPrintEnabled='false'\n\t\t\n\t\t\n\t\t\n\t\t\n>\n\t<layout>\n\t<row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<widgets importedTemplate='true'\/>\n<\/column>\n<\/row>\n<\/layout>\n<\/zml>" 
- 	 	}
 				 page Org_Dashboard 
 	 	 { 
  	 	 displayname = "Org Dashboard"
 
  	 	 icon = "business-board-30" 
-	 	 Content="<zml    \n\t\t\tisPdfEnabled='false'\n\t\t\n\t\t\tisPrintEnabled='false'\n\t\t\n\t\t\n\t\t\n\t\t\n>\n\t<layout>\n\t<row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Calendar_View'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'custom'\n\theightValue = '500'\n\tiszreport = 'false'\n            zc_Footer = 'true'\n            zc_AddRec = 'false'\n            zc_EditRec = 'false'\n            zc_Print = 'true'\n            zc_Export = 'true'\n            zc_DelRec = 'false'\n            zc_DuplRec = 'false'\n            zc_Search = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'All_Open_Tasks'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'false'\n            zc_Footer = 'true'\n            zc_AddRec = 'true'\n            zc_EditRec = 'true'\n            zc_Print = 'true'\n            zc_Export = 'true'\n            zc_DelRec = 'true'\n            zc_DuplRec = 'true'\n            zc_Search = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'TimeLog_Approvals'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'false'\n            zc_Footer = 'true'\n            zc_AddRec = 'false'\n            zc_EditRec = 'false'\n            zc_Print = 'true'\n            zc_Export = 'true'\n            zc_DelRec = 'false'\n            zc_DuplRec = 'false'\n            zc_Search = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Leave_Approvals1'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'false'\n            zc_Footer = 'true'\n            zc_AddRec = 'false'\n            zc_EditRec = 'false'\n            zc_Print = 'true'\n            zc_Export = 'true'\n            zc_DelRec = 'false'\n            zc_DuplRec = 'false'\n            zc_Search = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Open_Events'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'false'\n            zc_Footer = 'true'\n            zc_AddRec = 'true'\n            zc_EditRec = 'true'\n            zc_Print = 'true'\n            zc_Export = 'true'\n            zc_DelRec = 'true'\n            zc_DuplRec = 'true'\n            zc_Search = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Job_Stats'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Weekly_Hours_by_Employee'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Leave_Count_By_Employee'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Crew_Job_Throughput'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<panel \n\t\n\ttitle = 'Report Links'\n\t\n\t\ttitleSize = '20px'\n\t\t    italicTitle = 'false'\n            boldTitle = 'false'\n >\n\t<pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpadding = '0px'\n\tbgColor = '#FFFFFF'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpaddingTop = '17px'\n\tpaddingLeft = '17px'\n\tpaddingRight = '17px'\n\tpaddingBottom = '0px'\n\tbgColor = 'transparent'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='auto'\n\t\theight='auto'\n>\n\t<pc \n\t\n>\n\t<text \n    action = 'OpenReport'\n\tcomponentLinkName = 'All_Events'\n\ttarget = 'popup'\n\n\tcolor = '#00D9B1'\n\tsize = '16px'\n\tuppercase = 'false' \n\tunderline = 'true' \n\tbold = 'false' \n\titalic = 'false' \n\ttype = 'Text'\n\tbgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n\t  \n\t  value = 'All Events'\n>\n<\/text>\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr><pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpaddingTop = '17px'\n\tpaddingLeft = '17px'\n\tpaddingRight = '17px'\n\tpaddingBottom = '0px'\n\tbgColor = 'transparent'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='auto'\n\t\theight='auto'\n>\n\t<pc \n\t\n>\n\t<text \n    action = 'OpenReport'\n\tcomponentLinkName = 'All_Leaves1'\n\ttarget = 'popup'\n\n\tcolor = '#00D9B1'\n\tsize = '16px'\n\tuppercase = 'false' \n\tunderline = 'true' \n\tbold = 'false' \n\titalic = 'false' \n\ttype = 'Text'\n\tbgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n\t  \n\t  value = 'Employee Leaves'\n>\n<\/text>\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr><pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpaddingTop = '17px'\n\tpaddingLeft = '17px'\n\tpaddingRight = '17px'\n\tpaddingBottom = '0px'\n\tbgColor = 'transparent'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='auto'\n\t\theight='auto'\n>\n\t<pc \n\t\n>\n\t<text \n    action = 'OpenReport'\n\tcomponentLinkName = 'All_Time_Logs'\n\ttarget = 'new-window'\n\n\tcolor = '#00D9B1'\n\tsize = '16px'\n\tuppercase = 'false' \n\tunderline = 'true' \n\tbold = 'false' \n\titalic = 'false' \n\ttype = 'Text'\n\tbgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n\t  \n\t  value = 'Time Logs Report'\n>\n<\/text>\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr><pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpaddingTop = '17px'\n\tpaddingLeft = '17px'\n\tpaddingRight = '17px'\n\tpaddingBottom = '0px'\n\tbgColor = 'transparent'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='auto'\n\t\theight='auto'\n>\n\t<pc \n\t\n>\n\t<text \n    action = 'OpenReport'\n\tcomponentLinkName = 'All_Tasks'\n\ttarget = 'popup'\n\n\tcolor = '#00D9B1'\n\tsize = '16px'\n\tuppercase = 'false' \n\tunderline = 'true' \n\tbold = 'false' \n\titalic = 'false' \n\ttype = 'Text'\n\tbgColor = 'transparent'\n\n\n\n\t  \n\t  value = 'Tasks Report'\n>\n<\/text>\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr><pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpaddingTop = '17px'\n\tpaddingLeft = '17px'\n\tpaddingRight = '17px'\n\tpaddingBottom = '0px'\n\tbgColor = 'transparent'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='auto'\n\t\theight='auto'\n>\n\t<pc \n\t\n>\n\t<text \n    action = 'OpenReport'\n\tcomponentLinkName = 'Crews_History'\n\ttarget = 'popup'\n\n\tcolor = '#00D9B1'\n\tsize = '16px'\n\tuppercase = 'false' \n\tunderline = 'true' \n\tbold = 'false' \n\titalic = 'false' \n\ttype = 'Text'\n\tbgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n\t  \n\t  value = 'Crew Rota Report'\n>\n<\/text>\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr><pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpaddingTop = '17px'\n\tpaddingLeft = '17px'\n\tpaddingRight = '17px'\n\tpaddingBottom = '0px'\n\tbgColor = 'transparent'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='auto'\n\t\theight='auto'\n>\n\t<pc \n\t\n>\n\t<text \n    action = 'OpenReport'\n\tcomponentLinkName = 'All_Holidays'\n\ttarget = 'popup'\n\n\tcolor = '#00D9B1'\n\tsize = '16px'\n\tuppercase = 'false' \n\tunderline = 'true' \n\tbold = 'false' \n\titalic = 'false' \n\ttype = 'Text'\n\tbgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n\t  \n\t  value = 'Holiday List'\n>\n<\/text>\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr>\n<\/panel>\n<\/column>\n<\/row>\n<\/layout>\n<\/zml>" 
+	 	 Content="<zml    \n\t\t\tisPdfEnabled='false'\n\t\t\n\t\t\tisPrintEnabled='false'\n\t\t\n\t\t\n\t\t\n\t\t\tmobileDeviceConfig='{\"layout\":{\"displayType\":\"card\",\"design\":\"onebyone\",\"forcedOrientation\":false}}'\n\t\t\n>\n\t<layout>\n\t<row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Calendar_View'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'custom'\n\theightValue = '500'\n\tiszreport = 'false'\n            zc_Footer = 'true'\n            zc_AddRec = 'false'\n            zc_EditRec = 'true'\n            zc_Print = 'true'\n            zc_Export = 'true'\n            zc_DelRec = 'true'\n            zc_DuplRec = 'false'\n            zc_Search = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'All_Open_Tasks'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'false'\n            zc_Footer = 'true'\n            zc_AddRec = 'true'\n            zc_EditRec = 'true'\n            zc_Print = 'true'\n            zc_Export = 'true'\n            zc_DelRec = 'true'\n            zc_DuplRec = 'true'\n            zc_Search = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'TimeLog_Approvals'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'false'\n            zc_Footer = 'true'\n            zc_AddRec = 'false'\n            zc_EditRec = 'false'\n            zc_Print = 'true'\n            zc_Export = 'true'\n            zc_DelRec = 'false'\n            zc_DuplRec = 'false'\n            zc_Search = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Leave_Approvals1'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'false'\n            zc_Footer = 'true'\n            zc_AddRec = 'false'\n            zc_EditRec = 'false'\n            zc_Print = 'true'\n            zc_Export = 'true'\n            zc_DelRec = 'false'\n            zc_DuplRec = 'false'\n            zc_Search = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Open_Events'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'false'\n            zc_Footer = 'true'\n            zc_AddRec = 'true'\n            zc_EditRec = 'true'\n            zc_Print = 'true'\n            zc_Export = 'true'\n            zc_DelRec = 'true'\n            zc_DuplRec = 'true'\n            zc_Search = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Job_Stats'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Weekly_Hours_by_Employee'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Leave_Count_By_Employee'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Crew_Job_Throughput'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<panel \n\t\n\ttitle = 'Report Links'\n\t\n\t\ttitleSize = '20px'\n\t\t    italicTitle = 'false'\n            boldTitle = 'false'\n >\n\t<pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpadding = '0px'\n\tbgColor = '#FFFFFF'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpaddingTop = '17px'\n\tpaddingLeft = '17px'\n\tpaddingRight = '17px'\n\tpaddingBottom = '0px'\n\tbgColor = 'transparent'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='auto'\n\t\theight='auto'\n>\n\t<pc \n\t\n>\n\t<text \n    action = 'OpenReport'\n\tcomponentLinkName = 'All_Events'\n\ttarget = 'popup'\n\n\tcolor = '#00D9B1'\n\tsize = '16px'\n\tuppercase = 'false' \n\tunderline = 'true' \n\tbold = 'false' \n\titalic = 'false' \n\ttype = 'Text'\n\tbgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n\t  \n\t  value = 'All Events'\n>\n<\/text>\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr><pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpaddingTop = '17px'\n\tpaddingLeft = '17px'\n\tpaddingRight = '17px'\n\tpaddingBottom = '0px'\n\tbgColor = 'transparent'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='auto'\n\t\theight='auto'\n>\n\t<pc \n\t\n>\n\t<text \n    action = 'OpenReport'\n\tcomponentLinkName = 'All_Leaves1'\n\ttarget = 'popup'\n\n\tcolor = '#00D9B1'\n\tsize = '16px'\n\tuppercase = 'false' \n\tunderline = 'true' \n\tbold = 'false' \n\titalic = 'false' \n\ttype = 'Text'\n\tbgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n\t  \n\t  value = 'Employee Leaves'\n>\n<\/text>\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr><pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpaddingTop = '17px'\n\tpaddingLeft = '17px'\n\tpaddingRight = '17px'\n\tpaddingBottom = '0px'\n\tbgColor = 'transparent'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='auto'\n\t\theight='auto'\n>\n\t<pc \n\t\n>\n\t<text \n    action = 'OpenReport'\n\tcomponentLinkName = 'All_Time_Logs'\n\ttarget = 'new-window'\n\n\tcolor = '#00D9B1'\n\tsize = '16px'\n\tuppercase = 'false' \n\tunderline = 'true' \n\tbold = 'false' \n\titalic = 'false' \n\ttype = 'Text'\n\tbgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n\t  \n\t  value = 'Time Logs Report'\n>\n<\/text>\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr><pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpaddingTop = '17px'\n\tpaddingLeft = '17px'\n\tpaddingRight = '17px'\n\tpaddingBottom = '0px'\n\tbgColor = 'transparent'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='auto'\n\t\theight='auto'\n>\n\t<pc \n\t\n>\n\t<text \n    action = 'OpenReport'\n\tcomponentLinkName = 'All_Tasks'\n\ttarget = 'popup'\n\n\tcolor = '#00D9B1'\n\tsize = '16px'\n\tuppercase = 'false' \n\tunderline = 'true' \n\tbold = 'false' \n\titalic = 'false' \n\ttype = 'Text'\n\tbgColor = 'transparent'\n\n\n\n\t  \n\t  value = 'Tasks Report'\n>\n<\/text>\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr><pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpaddingTop = '17px'\n\tpaddingLeft = '17px'\n\tpaddingRight = '17px'\n\tpaddingBottom = '0px'\n\tbgColor = 'transparent'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='auto'\n\t\theight='auto'\n>\n\t<pc \n\t\n>\n\t<text \n    action = 'OpenReport'\n\tcomponentLinkName = 'Crews_History'\n\ttarget = 'popup'\n\n\tcolor = '#00D9B1'\n\tsize = '16px'\n\tuppercase = 'false' \n\tunderline = 'true' \n\tbold = 'false' \n\titalic = 'false' \n\ttype = 'Text'\n\tbgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n\t  \n\t  value = 'Crew Rota Report'\n>\n<\/text>\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr><pr \n\t\t\twidth='fill'\n\t\theight='fill'\n>\n\t<pc \n\t\tpaddingTop = '17px'\n\tpaddingLeft = '17px'\n\tpaddingRight = '17px'\n\tpaddingBottom = '0px'\n\tbgColor = 'transparent'\n\n\t\twidth = '100%'\n\t\thAlign = 'center'\n>\n\t<pr \n\t\t\twidth='auto'\n\t\theight='auto'\n>\n\t<pc \n\t\n>\n\t<text \n    action = 'OpenReport'\n\tcomponentLinkName = 'All_Holidays'\n\ttarget = 'popup'\n\n\tcolor = '#00D9B1'\n\tsize = '16px'\n\tuppercase = 'false' \n\tunderline = 'true' \n\tbold = 'false' \n\titalic = 'false' \n\ttype = 'Text'\n\tbgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n\t  \n\t  value = 'Holiday List'\n>\n<\/text>\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr>\n<\/panel>\n<\/column>\n<\/row>\n<\/layout>\n<\/zml>" 
+ 	 	}
+				 page Time_Tracker_Widget(email) 
+	 	 { 
+ 	 	 displayname = "Time Tracker Widget"
+
+ 	 	 icon = "tech-2-p-system-update" 
+	 	 Content="<zml    \n\t\t\tisPdfEnabled='false'\n\t\t\n\t\t\tisPrintEnabled='false'\n\t\t\n\t\t\n\t\t\n\t\t\n>\n\t<layout>\n\t<row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<widgets importedTemplate='true'\/>\n<\/column>\n<\/row>\n<\/layout>\n<\/zml>" 
  	 	}
 				 page Home1 
 	 	 { 
@@ -177,6 +166,20 @@
 
  	 	 icon = "business-board-30" 
 	 	 Content="<zml    \n\t\t\tisPdfEnabled='false'\n\t\t\n\t\t\tisPrintEnabled='false'\n\t\t\n\t\t\n\t\t\n\t\t\n>\n\t<layout>\n\t<row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Calendar_View'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'false'\n            zc_Footer = 'true'\n            zc_AddRec = 'false'\n            zc_EditRec = 'false'\n            zc_Print = 'true'\n            zc_Export = 'true'\n            zc_DelRec = 'false'\n            zc_DuplRec = 'false'\n            zc_Search = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Open_Tasks1'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'false'\n            zc_Footer = 'true'\n            zc_AddRec = 'true'\n            zc_EditRec = 'true'\n            zc_Print = 'true'\n            zc_Export = 'true'\n            zc_DelRec = 'false'\n            zc_DuplRec = 'false'\n            zc_Search = 'true'\n\/>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report \n\t\n\timportedTemplate = 'false'\n\tappLinkName = 'thisapp'\n\tlinkName = 'Open_Events'\n\tallowPublicAccess = 'false'\n\tisCompPublished = 'false'\n\theightType = 'auto'\n\theightValue = '700'\n\tiszreport = 'false'\n            zc_Footer = 'true'\n            zc_AddRec = 'true'\n            zc_EditRec = 'true'\n            zc_Print = 'true'\n            zc_Export = 'true'\n            zc_DelRec = 'false'\n            zc_DuplRec = 'false'\n            zc_Search = 'true'\n\/>\n<\/column>\n<\/row>\n<\/layout>\n<\/zml>" 
+ 	 	}
+				 page google_calander 
+	 	 { 
+ 	 	 displayname = "google calander"
+
+ 	 	 icon = "design-2-android" 
+	 	 Content="<zml    \n\t\t\tisPdfEnabled='false'\n\t\t\n\t\t\tisPrintEnabled='false'\n\t\t\n\t\t\n\t\t\n\t\t\n>\n\t<layout>\n\t<row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<embed \n\t\n\thAlign = 'center'\n\turl = 'https:\/\/calendar.google.com\/calendar\/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FDenver&amp;src=bzIzczdiaG9zb2gycjJ2cmxiaXBmMzk0cGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=OTJqMWU3aTQ1a2VqZTE5a3NkdDh1OGx1Ym9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=cTdmYXB0N3NlN2t0ODVrZGFjMjRrYjZ1NDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=NG9ibzhzYmppaGhjZmtudDNpN2ZxY2duNm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23009688&amp;color=%23D50000&amp;color=%238E24AA&amp;color=%23F6BF26&amp;color=%23616161'\n\twidth = '800'\n\theight = '600'\n\/>\n\n<\/column>\n<\/row>\n<\/layout>\n<\/zml>" 
+ 	 	}
+				 page Time_Tracker1 
+	 	 { 
+ 	 	 displayname = "Time Tracker"
+
+ 	 	 icon = "users-2-a-time" 
+	 	 Content="<zml    \n\t\t\tisPdfEnabled='false'\n\t\t\n\t\t\tisPrintEnabled='false'\n\t\t\n\t\t\n\t\t\n\t\t\n>\n\t<layout>\n\t<row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<widgets importedTemplate='true'\/>\n<\/column>\n<\/row>\n<\/layout>\n<\/zml>" 
  	 	}
 	}
 	section Jobs1
@@ -778,6 +781,14 @@
 				Discount
 				Total as "Invoice Total"
 				Balance_Due as "Balance Due"
+				custom action "Start Job"
+				(
+	  			workflow = Start_Job1
+				show action in view header = true
+				show action in edit record menu = true
+				column header = "Start Job"
+				condition = (Crew_Lead.Email_address == zoho.loginuserid || Crew_Lead1.Email_address == zoho.loginuserid || Superintendent.Email_address == zoho.loginuserid && Status == "Scheduled")
+				)
 			)
 			filters
 			(
@@ -817,13 +828,6 @@
 				show action in view header = true
 				show action in edit record menu = true
 				condition = (Log_Status == "Checked In")
-				)
-				"Start Job"
-				(
-	  			workflow = Start_Job1
-				show action in view header = true
-				show action in edit record menu = true
-				condition = (Crew_Lead.Email_address == zoho.loginuserid || Crew_Lead1.Email_address == zoho.loginuserid || Superintendent.Email_address == zoho.loginuserid && Status == "Scheduled")
 				)
 			)
 			quickview
@@ -1026,6 +1030,14 @@
 				Total as "Invoice Total"
 				Balance_Due as "Balance Due"
 				Client_Id as "Client Id"
+				custom action "Start Job"
+				(
+	  			workflow = Start_Job1
+				show action in view header = true
+				show action in edit record menu = true
+				column header = "Start Job"
+				condition = (Crew_Lead.Email_address == zoho.loginuserid || Crew_Lead1.Email_address == zoho.loginuserid || Superintendent.Email_address == zoho.loginuserid && Status == "Scheduled")
+				)
 			)
 			filters
 			(
@@ -1069,13 +1081,6 @@
 				show action in view header = true
 				show action in edit record menu = true
 				condition = (Log_Status == "Checked In")
-				)
-				"Start Job"
-				(
-	  			workflow = Start_Job1
-				show action in view header = true
-				show action in edit record menu = true
-				condition = (Crew_Lead.Email_address == zoho.loginuserid || Crew_Lead1.Email_address == zoho.loginuserid || Superintendent.Email_address == zoho.loginuserid && Status == "Scheduled")
 				)
 			)
 			conditional formatting
@@ -1499,14 +1504,6 @@
 	 			column = 1   
 				width = medium
 			)
-			Time_in_Hours
-			(
-				type = decimal
-				displayname = "Time in Hours"
-	 			row = 1
-	 			column = 1   
-				width = medium
-			)
 			Status1
 			(
 				type = picklist
@@ -1575,10 +1572,18 @@
 	 			column = 1   
 				width = medium
 			)
-			Hours
+			Hours1
 			(
     			type = text
+				displayname = "Hours"
 				initial value = "00:00"
+	 			row = 2
+	 			column = 1   
+				width = medium
+			)
+			Hours
+			(
+				type = decimal
 	 			row = 2
 	 			column = 1   
 				width = medium
@@ -1644,7 +1649,7 @@
 			(
 				type = list	
 				displayname = "Approver Emails"
-				values = {"Choice 1", "info@lifetimeepoxyutah.com", "porter@lifetimeepoxyutah.com", "johnson.taylor1474@gmail.com", "cortdurf18@gmail.com"}
+				values = {"Choice 1", "info@lifetimeepoxyutah.com", "porter@lifetimeepoxyutah.com", "johnson.taylor1474@gmail.com", "cortdurf18@gmail.com", "kneecap37@gmail.com"}
 				height = 60px
 	 			row = 6
 	 			column = 1   
@@ -1897,6 +1902,119 @@
 				}
 			}
 		}
+		list All_Leaves1
+		{
+			displayName = "All Leaves"
+   			hide = true
+			show all rows from Apply_Leave    
+			(
+				Employee1 as "Employee"
+				Type
+				Date_field as "Date"
+				Form_Date as "Form Date"
+				To_Date as "To Date"
+				Leave_Taken_By as "Leave Taken Sofar"
+				Leave_Type as "Leave Type"
+				Reason_for_leave as "Leave Description"
+				Status
+				Added_User as "Added User"
+				Total_Day_s as "Total Day(s)"
+			)
+			group by
+			(
+				Added_User ascending
+			)
+			options
+			(
+				icon = "travel-world"
+	 		)
+			quickview
+			(
+				layout
+				(
+		 			type = -1
+					datablock1
+					(
+			 			layout type = -1
+						fields
+						(
+							Employee1 as "Employee"
+							Type
+							Date_field as "Date"
+							Form_Date as "Form Date"
+							To_Date as "To Date"
+							Total_Day_s as "Total Day(s)"
+							Leave_Taken_By as "Leave Taken Sofar"
+							Leave_Type as "Leave Type"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = -2
+						fields
+						(
+							Employee1 as "Employee"
+							Type
+							Date_field as "Date"
+							Form_Date as "Form Date"
+							To_Date as "To Date"
+							Total_Day_s as "Total Day(s)"
+							Leave_Taken_By as "Leave Taken Sofar"
+							Leave_Type as "Leave Type"
+							Reason_for_leave as "Leave Description"
+							Status
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
 		pivotchart Weekly_Hours_by_Employee
 		{ 
 			displayname = "Weekly Hours by Employee"
@@ -1919,13 +2037,13 @@
 			Task 
 			Date_field  as "Date"
 			Track_as  as "Track as"
-			Hours 
+			Hours1  as "Hours"
 			Status1  as "Status"
 			Status 
 			Log_Time_Id  as "Log Time Id"
 			Add_weekly_Logs  as "Add weekly Logs"
 			Date_Range  as "Date Range"
-			Time_in_Hours  as "Time in Hours"
+			Hours  as "Hours1"
 			Log_Type  as "Log Type"
 			Emp_email  as "Emp email"
 			From_Time  as "Start Time"
@@ -1939,17 +2057,21 @@
 			show all rows from Apply_Leave  [Status == "Draft" && Leave_Approvers.Email_address == zoho.loginuserid && Employee_Email.Role != "Admin" && Employee_Email.Role != "Owner" && Employee_Email.Email_address != zoho.loginuserid]  
 			(
 				Form_Date as "Form Date"
+				(
+					displayformat = fulldate
+				)
 				To_Date as "To Date"
+				(
+					displayformat = fulldate
+				)
 				Reason_for_leave as "Leave Description"
 				Type
-				Date_field as "Date"
+				Date_field as "Date submitted"
 				Leave_Type as "Leave Type"
 				Status
 				Employee1 as "Employee"
 				Leave_Taken_By as "Leave Taken Sofar"
-				Added_User as "Added User"
 				Employee_Email as "Employee Email"
-				Employee_ID as "Employee ID"
 				custom action "Approve"
 				(
 	  			workflow = Approved_Leave
@@ -1958,12 +2080,12 @@
 				column header = "Approve"
 				condition = (Status == "Draft")
 				)
-				Leave_Approvers as "Leave Approvers"
 				Total_Day_s as "Total Day(s)"
+				Employee_Email.First_Name as "First Name"
 			)
 			group by
 			(
-				Added_User ascending
+				Employee_Email.First_Name ascending
 			)
 			options
 			(
@@ -1973,6 +2095,14 @@
 			(
 				layout
 				(
+		 			customlayouts
+	     			(
+		 				template
+		 				(
+		 	  				displayname="Custom Layout 1"
+		 	  				content="<panel \n >\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		padding = '0px'\n	bgColor = '#FFFFFF'\n\n		width = '100%'\n		hAlign = 'center'\n		vAlign = 'middle'\n>\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		paddingTop = '17px'\n	paddingLeft = '0px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '29%'\n		hAlign = 'center'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Leave_Type'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		padding = '17px'\n	bgColor = 'transparent'\n\n		width = '17%'\n		hAlign = 'center'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Total_Day_s'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '17px'\n	paddingLeft = '0px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '26%'\n		hAlign = 'left'\n		vAlign = 'top'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	marginLeft = '0px'\n	marginRight = '0px' \n	marginTop = '0px'\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Form_Date'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '17px'\n	paddingLeft = '0px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '28%'\n		hAlign = 'left'\n		vAlign = 'top'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'To_Date'\n>\n</text>\n\n</pc>\n</pr>\n</pc>\n</pr>\n</pc>\n</pr>\n</panel>"
+		    			)
+	     			)
 		 			type = -1
 					datablock1
 					(
@@ -2024,19 +2154,17 @@
 			 			layout type = -2
 						fields
 						(
+							Employee1 as "Employee"
+							Employee_Email as "Employee Email"
+							Total_Day_s as "Total Day(s)"
+							Leave_Type as "Leave Type"
+							Type
 							Form_Date as "Form Date"
 							To_Date as "To Date"
-							Total_Day_s as "Total Day(s)"
 							Reason_for_leave as "Leave Description"
-							Type
-							Date_field as "Date"
-							Leave_Type as "Leave Type"
+							Date_field as "Date submitted"
 							Status
-							Employee1 as "Employee"
 							Leave_Taken_By as "Leave Taken Sofar"
-							Employee_Email as "Employee Email"
-							Employee_ID as "Employee ID"
-							Leave_Approvers as "Leave Approvers"
 						)
 					)
 				)
@@ -2170,7 +2298,6 @@
 				Date_field as "Date"
 				Track_as as "Track as"
 				Status
-				Hours
 				users as "Submitted By"
 				Status1 as "Status"
 				Job_Name as "Job Name"
@@ -2181,6 +2308,7 @@
 				Log_Type as "Log Type"
 				From_Time as "Start Time"
 				End_Time1 as "End Time"
+				Hours
 			)
 			filters
 			(
@@ -2275,6 +2403,8 @@
 							Date_field as "Date"
 							Track_as as "Track as"
 							Status
+							From_Time as "Start Time"
+							End_Time1 as "End Time"
 							Hours
 						)
 					)
@@ -2330,8 +2460,11 @@
 				Task
 				Description
 				Date_field as "Date"
+				(
+					displayformat = fulldate
+				)
 				Track_as as "Track as"
-				Hours
+				Hours1 as "Hours"
 				Status
 				Add_weekly_Logs as "Add weekly Logs"
 				users as "Submitted By"
@@ -2343,7 +2476,7 @@
 				show action in view header = true
 				show action in edit record menu = true
 				column header = "Approve"
-				condition = (Status1 == "Draft")
+				condition = (Status1 == "Pending Approval")
 				)
 				custom action "Send Back For Review"
 				(
@@ -2351,9 +2484,9 @@
 				show action in view header = true
 				show action in edit record menu = true
 				column header = "Send Back For Review"
-				condition = (Status1 == "Draft")
+				condition = (Status1 == "Pending Approval")
 				)
-				Employee_Email as "Employee Email"
+				Employee_Email.First_Name as "First Name"
 			)
 			group by
 			(
@@ -2377,7 +2510,7 @@
 		 				template
 		 				(
 		 	  				displayname="Custom Layout 1"
-		 	  				content="<panel \n >\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		padding = '0px'\n	bgColor = '#FFFFFF'\n\n		width = '100%'\n		hAlign = 'center'\n		vAlign = 'middle'\n>\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		padding = '17px'\n	bgColor = 'transparent'\n\n		width = '24%'\n		hAlign = 'center'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '21'\n      	  numOfLines = '1'\n	  value = 'Employee_Email'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		padding = '17px'\n	bgColor = 'transparent'\n\n		width = '25%'\n		hAlign = 'center'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '21'\n      	  numOfLines = '1'\n	  value = 'Date_field'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '17px'\n	paddingLeft = '0px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'transparent'\n\n		width = '24%'\n		hAlign = 'center'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '21'\n      	  numOfLines = '1'\n	  value = 'Task'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '17px'\n	paddingLeft = '0px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'transparent'\n\n		width = '27%'\n		hAlign = 'center'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '21'\n      	  numOfLines = '1'\n	  value = 'Hours'\n>\n</text>\n\n</pc>\n</pr>\n</pc>\n</pr>\n</pc>\n</pr>\n</panel>"
+		 	  				content="<panel \n >\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		padding = '0px'\n	bgColor = '#FFFFFF'\n\n		width = '100%'\n		hAlign = 'center'\n		vAlign = 'middle'\n>\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '24%'\n		hAlign = 'left'\n		vAlign = 'top'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '16'\n      	  numOfLines = '1'\n	  value = 'Employee_Email.First_Name'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '25%'\n		hAlign = 'left'\n		vAlign = 'top'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Date_field'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '0px'\n	paddingLeft = '0px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '24%'\n		hAlign = 'left'\n		vAlign = 'top'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Task'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '0px'\n	paddingLeft = '0px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '27%'\n		hAlign = 'left'\n		vAlign = 'top'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Hours1'\n>\n</text>\n\n</pc>\n</pr>\n</pc>\n</pr>\n</pc>\n</pr>\n</panel>"
 		    			)
 	     			)
 		 			type = -1
@@ -2392,7 +2525,7 @@
 							users as "Submitted By"
 							Task
 							Job_Name as "Job Name"
-							Hours
+							Hours1 as "Hours"
 						)
 					)
 				)
@@ -2441,7 +2574,7 @@
 							Description
 							Date_field as "Date"
 							Track_as as "Track as"
-							Hours
+							Hours1 as "Hours"
 							Status
 							Add_weekly_Logs as "Add weekly Logs"
 						)
@@ -2475,16 +2608,14 @@
 					displayformat = fulldate
 				)
 				Track_as as "Track as"
-				Hours
+				Hours1 as "Hours"
 				Status
 				Date_Range as "Date Range"
-				Add_weekly_Logs.Submitted_By as "Submitted By"
 				Job_Name as "Job Name"
 			)
 			group by
 			(
 				Date_Range ascending
-				Add_weekly_Logs.Submitted_By ascending
 			)
 			sort by
 			(
@@ -2503,7 +2634,7 @@
 		 				template
 		 				(
 		 	  				displayname="Custom Layout 1"
-		 	  				content="<panel \n >\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		bgColor = '#FFFFFF'\n\n		width = '100%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		paddingTop = '17px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '24%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '23'\n      	  numOfLines = '1'\n	  value = 'Date_field'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '17px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'transparent'\n\n		width = '24%'\n		hAlign = 'center'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '23'\n      	  numOfLines = '1'\n	  value = 'Job_Name'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		padding = '17px'\n	bgColor = 'transparent'\n\n		width = '27%'\n		hAlign = 'center'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '23'\n      	  numOfLines = '1'\n	  value = 'Task'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		padding = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '25%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '23'\n      	  numOfLines = '1'\n	  value = 'Hours'\n>\n</text>\n\n</pc>\n</pr>\n</pc>\n</pr>\n</pc>\n</pr>\n</panel>"
+		 	  				content="<panel \n >\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		bgColor = '#FFFFFF'\n\n		width = '100%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		paddingTop = '17px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '26%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Date_field'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		padding = '17px'\n	bgColor = 'transparent'\n\n		width = '53%'\n		hAlign = 'center'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Task'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		padding = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '21%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Hours1'\n>\n</text>\n\n</pc>\n</pr>\n</pc>\n</pr>\n</pc>\n</pr>\n</panel>"
 		    			)
 	     			)
 		 			type = -1
@@ -2554,7 +2685,7 @@
 							Description
 							Date_field as "Date"
 							Track_as as "Track as"
-							Hours
+							Hours1 as "Hours"
 							Status
 						)
 					)
@@ -2579,7 +2710,7 @@
 				Description
 				Date_field as "Date"
 				Track_as as "Track as"
-				Hours
+				Hours1 as "Hours"
 				Status
 				Log_Time_Id as "Log Time Id"
 				Add_weekly_Logs as "Add weekly Logs"
@@ -2639,7 +2770,7 @@
 							Description
 							Date_field as "Date"
 							Track_as as "Track as"
-							Hours
+							Hours1 as "Hours"
 							Status
 							Log_Time_Id as "Log Time Id"
 							Add_weekly_Logs as "Add weekly Logs"
@@ -2672,18 +2803,16 @@
 					displayformat = fulldate
 				)
 				Track_as as "Track as"
-				Hours
+				Hours1 as "Hours"
 				Status
 				Log_Time_Id as "Log Time Id"
 				Add_weekly_Logs as "Add weekly Logs"
 				Date_Range as "Date Range"
-				Add_weekly_Logs.Submitted_By as "Submitted By"
 				Job_Name as "Job Name"
 			)
 			group by
 			(
 				Date_Range ascending
-				Add_weekly_Logs.Submitted_By ascending
 			)
 			sort by
 			(
@@ -2702,7 +2831,7 @@
 		 				template
 		 				(
 		 	  				displayname="Custom Layout 1"
-		 	  				content="<panel \n >\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		bgColor = '#FFFFFF'\n\n		width = '100%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '26%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '23'\n      	  numOfLines = '1'\n	  value = 'Date_field'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '26%'\n		hAlign = 'center'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '21'\n      	  numOfLines = '1'\n	  value = 'Job_Name'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '23%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '23'\n      	  numOfLines = '1'\n	  value = 'Task'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '0px'\n	paddingLeft = '0px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '25%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '23'\n      	  numOfLines = '1'\n	  value = 'Hours'\n>\n</text>\n\n</pc>\n</pr>\n</pc>\n</pr>\n</pc>\n</pr>\n</panel>"
+		 	  				content="<panel \n >\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		bgColor = '#FFFFFF'\n\n		width = '100%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '34%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Date_field'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '43%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Task'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '0px'\n	paddingLeft = '0px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '23%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Hours1'\n>\n</text>\n\n</pc>\n</pr>\n</pc>\n</pr>\n</pc>\n</pr>\n</panel>"
 		    			)
 	     			)
 		 			type = -1
@@ -2764,7 +2893,7 @@
 							Description
 							Date_field as "Date"
 							Track_as as "Track as"
-							Hours
+							Hours1 as "Hours"
 							Status
 							Log_Time_Id as "Log Time Id"
 							Add_weekly_Logs as "Add weekly Logs"
@@ -2795,12 +2924,12 @@
 					displayformat = fulldate
 				)
 				Track_as as "Track as"
-				Hours
+				Hours1 as "Hours"
 				Status
 				Job_Name as "Job Name"
 				Date_Range as "Date Range"
 				Employee_Email as "Employee Email"
-				Time_in_Hours as "Time in Hours"
+				Hours
 				Status1 as "Status"
 				Log_Type as "Log Type"
 				From_Time as "Start Time"
@@ -2809,7 +2938,6 @@
 			group by
 			(
 				Date_Range ascending
-				users ascending
 			)
 			sort by
 			(
@@ -2828,7 +2956,7 @@
 		 				template
 		 				(
 		 	  				displayname="Custom Layout 1"
-		 	  				content="<panel \n >\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		bgColor = '#FFFFFF'\n\n		width = '100%'\n		hAlign = 'center'\n		vAlign = 'middle'\n>\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '19%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '23'\n      	  numOfLines = '1'\n	  value = 'Date_field'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '26%'\n		hAlign = 'center'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '23'\n      	  numOfLines = '1'\n	  value = 'Task'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '27%'\n		hAlign = 'center'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	marginLeft = '0px'\n	marginRight = '0px' \n	marginTop = '0px'\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '23'\n      	  numOfLines = '1'\n	  value = 'Job_Name'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '28%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '16px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '23'\n      	  numOfLines = '1'\n	  value = 'Hours'\n>\n</text>\n\n</pc>\n</pr>\n</pc>\n</pr>\n</pc>\n</pr>\n</panel>"
+		 	  				content="<panel \n >\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		bgColor = '#FFFFFF'\n\n		width = '100%'\n		hAlign = 'center'\n		vAlign = 'middle'\n>\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '29%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Date_field'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '47%'\n		hAlign = 'center'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Task'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '0px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '24%'\n		hAlign = 'left'\n		vAlign = 'middle'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Hours1'\n>\n</text>\n\n</pc>\n</pr>\n</pc>\n</pr>\n</pc>\n</pr>\n</panel>"
 		    			)
 	     			)
 		 			type = -1
@@ -2898,9 +3026,9 @@
 							Description
 							Date_field as "Date"
 							Track_as as "Track as"
-							Hours
+							Hours1 as "Hours"
 							Status
-							Time_in_Hours as "Time in Hours"
+							Hours
 						)
 					)
 				)
@@ -3017,119 +3145,6 @@
     			(
     	 			header
     	 			(
-    	 			)
-    			)
-			)
-		}
-		list All_Leaves1
-		{
-			displayName = "All Leaves"
-   			hide = true
-			show all rows from Apply_Leave    
-			(
-				Employee1 as "Employee"
-				Type
-				Date_field as "Date"
-				Form_Date as "Form Date"
-				To_Date as "To Date"
-				Leave_Taken_By as "Leave Taken Sofar"
-				Leave_Type as "Leave Type"
-				Reason_for_leave as "Leave Description"
-				Status
-				Added_User as "Added User"
-				Total_Day_s as "Total Day(s)"
-			)
-			group by
-			(
-				Added_User ascending
-			)
-			options
-			(
-				icon = "travel-world"
-	 		)
-			quickview
-			(
-				layout
-				(
-		 			type = -1
-					datablock1
-					(
-			 			layout type = -1
-						fields
-						(
-							Employee1 as "Employee"
-							Type
-							Date_field as "Date"
-							Form_Date as "Form Date"
-							To_Date as "To Date"
-							Total_Day_s as "Total Day(s)"
-							Leave_Taken_By as "Leave Taken Sofar"
-							Leave_Type as "Leave Type"
-						)
-					)
-				)
-
-				menu
-    			(
-    	 			header
-    	 			(
-    		 			Edit 
-    		 			Duplicate 
-    		 			Delete 
-    	 			)
-							record
-							(
-								Edit   	   
-								Duplicate   	   
-								Delete   	   
-    						)
-    			)
-    			action
-    			(
-							on click
-							(
-								View Record   	   
-    						)
-							on right click
-							(
-								Edit   	   
-								Delete   	   
-								Duplicate   	   
-								View Record   	   
-    						)
-     			)
-			)
-			detailview
-			(
-				layout
-				(
-		 			type = 1
-					datablock1
-					(
-			 			layout type = -2
-						fields
-						(
-							Employee1 as "Employee"
-							Type
-							Date_field as "Date"
-							Form_Date as "Form Date"
-							To_Date as "To Date"
-							Total_Day_s as "Total Day(s)"
-							Leave_Taken_By as "Leave Taken Sofar"
-							Leave_Type as "Leave Type"
-							Reason_for_leave as "Leave Description"
-							Status
-						)
-					)
-				)
-
-				menu
-    			(
-    	 			header
-    	 			(
-    		 			Edit 
-    		 			Duplicate 
-    		 			Delete 
     	 			)
     			)
 			)
@@ -4713,6 +4728,175 @@
     			)
 			)
 		}
+		calendar Employee_Birthdays
+		{
+			displayName = "Employee Birthdays"
+   			hide = true
+			show all rows from Add_Employee    
+			(
+				Employee_ID as "Employee ID"
+				First_Name as "First Name"
+				Email_address as "Email address"
+				Nick_Name as "Nick Name"
+				Last_Name as "Last Name"
+				Department
+				Location
+				Designation
+				Role
+				Employment_Type as "Employment Type"
+				Employee_Status as "Employee Status"
+				Source_of_Hire as "Source of Hire"
+				Date_of_Joining as "Date of Joining"
+				Current_Experience as "Department"
+				Date_of_Birth as "Date of Birth"
+				Age
+				Gender
+				Marital_Status as "Marital Status"
+				About_Me as "About Me"
+				Ask_me_about_Expertise as "Ask me about/Expertise"
+				NI_number as "NI Number"
+				SSN
+				Work_Phone_Number as "Work Phone Number"
+				(
+					displayformat = plainnumber 
+					linktodial = enable
+				)
+				Extension
+				Seating_Location as "Seating Location"
+				Present_Address  as "Present Address"
+	 			(
+	      			displayformat = [address_line_1+""+address_line_2+""+district_city+""+state_province+""+postal_Code+""+country]
+	      			enable = Link_to_Map,Show_As_Text
+	 			)
+				Tags
+				Phone_Number as "Phone"
+				(
+					displayformat = plainnumber 
+					linktodial = enable
+				)
+				Personal_Email_Address as "Personal Email Address"
+				Same_as_Present_Address as "Same as Present Address"
+				Permanent_Address  as "Permanent Address"
+	 			(
+	      			displayformat = [address_line_11+""+address_line_21+""+district_city1+""+state_province1+""+postal_Code1+""+country1]
+	      			enable = Link_to_Map,Show_As_Text
+	 			)
+				Date_of_Exit as "Date of Exit"
+			)
+			options
+			(
+				display type = month
+				week start day = sunday
+				display field = Date_of_Birth
+				start date = Date_of_Birth
+				default date 
+				(
+	    			day   = Today
+	    			month = Currentmonth
+	    			year  = Currentyear
+				)
+				icon = "business-business-contact-89"
+			)
+			quickview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = 1
+						fields
+						(
+							Employee_ID as "Employee ID"
+							First_Name as "First Name"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = -2
+						fields
+						(
+							Employee_ID as "Employee ID"
+							First_Name as "First Name"
+							Email_address as "Email address"
+							Nick_Name as "Nick Name"
+							Last_Name as "Last Name"
+							Department
+							Location
+							Designation
+							Role
+							Employment_Type as "Employment Type"
+							Employee_Status as "Employee Status"
+							Source_of_Hire as "Source of Hire"
+							Date_of_Joining as "Date of Joining"
+							Current_Experience as "Department"
+							Date_of_Birth as "Date of Birth"
+							Age
+							Gender
+							Marital_Status as "Marital Status"
+							About_Me as "About Me"
+							Ask_me_about_Expertise as "Ask me about/Expertise"
+							NI_number as "NI Number"
+							SSN
+							Work_Phone_Number as "Work Phone Number"
+							Extension
+							Seating_Location as "Seating Location"
+							Present_Address as "Present Address"
+							Tags
+							Phone_Number as "Phone"
+							Personal_Email_Address as "Personal Email Address"
+							Same_as_Present_Address as "Same as Present Address"
+							Permanent_Address as "Permanent Address"
+							Date_of_Exit as "Date of Exit"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
 		calendar Calendar_View
 		{
 			displayName = "Org Calander"
@@ -4728,7 +4912,7 @@
 			)
 			options
 			(
-				display type = week
+				display type = month
 				week start day = sunday
 				display field = Event_Name
 				start date = Start_Date
@@ -5213,175 +5397,6 @@
     			)
 			)
 		}
-		calendar Employee_Birthdays
-		{
-			displayName = "Employee Birthdays"
-   			hide = true
-			show all rows from Add_Employee    
-			(
-				Employee_ID as "Employee ID"
-				First_Name as "First Name"
-				Email_address as "Email address"
-				Nick_Name as "Nick Name"
-				Last_Name as "Last Name"
-				Department
-				Location
-				Designation
-				Role
-				Employment_Type as "Employment Type"
-				Employee_Status as "Employee Status"
-				Source_of_Hire as "Source of Hire"
-				Date_of_Joining as "Date of Joining"
-				Current_Experience as "Department"
-				Date_of_Birth as "Date of Birth"
-				Age
-				Gender
-				Marital_Status as "Marital Status"
-				About_Me as "About Me"
-				Ask_me_about_Expertise as "Ask me about/Expertise"
-				NI_number as "NI Number"
-				SSN
-				Work_Phone_Number as "Work Phone Number"
-				(
-					displayformat = plainnumber 
-					linktodial = enable
-				)
-				Extension
-				Seating_Location as "Seating Location"
-				Present_Address  as "Present Address"
-	 			(
-	      			displayformat = [address_line_1+""+address_line_2+""+district_city+""+state_province+""+postal_Code+""+country]
-	      			enable = Link_to_Map,Show_As_Text
-	 			)
-				Tags
-				Phone_Number as "Phone"
-				(
-					displayformat = plainnumber 
-					linktodial = enable
-				)
-				Personal_Email_Address as "Personal Email Address"
-				Same_as_Present_Address as "Same as Present Address"
-				Permanent_Address  as "Permanent Address"
-	 			(
-	      			displayformat = [address_line_11+""+address_line_21+""+district_city1+""+state_province1+""+postal_Code1+""+country1]
-	      			enable = Link_to_Map,Show_As_Text
-	 			)
-				Date_of_Exit as "Date of Exit"
-			)
-			options
-			(
-				display type = month
-				week start day = sunday
-				display field = Date_of_Birth
-				start date = Date_of_Birth
-				default date 
-				(
-	    			day   = Today
-	    			month = Currentmonth
-	    			year  = Currentyear
-				)
-				icon = "business-business-contact-89"
-			)
-			quickview
-			(
-				layout
-				(
-		 			type = 1
-					datablock1
-					(
-			 			layout type = 1
-						fields
-						(
-							Employee_ID as "Employee ID"
-							First_Name as "First Name"
-						)
-					)
-				)
-
-				menu
-    			(
-    	 			header
-    	 			(
-    	 			)
-							record
-							(
-								Edit   	   
-								Duplicate   	   
-								Delete   	   
-    						)
-    			)
-    			action
-    			(
-							on click
-							(
-								View Record   	   
-    						)
-							on right click
-							(
-								Edit   	   
-								Delete   	   
-								Duplicate   	   
-								View Record   	   
-    						)
-     			)
-			)
-			detailview
-			(
-				layout
-				(
-		 			type = 1
-					datablock1
-					(
-			 			layout type = -2
-						fields
-						(
-							Employee_ID as "Employee ID"
-							First_Name as "First Name"
-							Email_address as "Email address"
-							Nick_Name as "Nick Name"
-							Last_Name as "Last Name"
-							Department
-							Location
-							Designation
-							Role
-							Employment_Type as "Employment Type"
-							Employee_Status as "Employee Status"
-							Source_of_Hire as "Source of Hire"
-							Date_of_Joining as "Date of Joining"
-							Current_Experience as "Department"
-							Date_of_Birth as "Date of Birth"
-							Age
-							Gender
-							Marital_Status as "Marital Status"
-							About_Me as "About Me"
-							Ask_me_about_Expertise as "Ask me about/Expertise"
-							NI_number as "NI Number"
-							SSN
-							Work_Phone_Number as "Work Phone Number"
-							Extension
-							Seating_Location as "Seating Location"
-							Present_Address as "Present Address"
-							Tags
-							Phone_Number as "Phone"
-							Personal_Email_Address as "Personal Email Address"
-							Same_as_Present_Address as "Same as Present Address"
-							Permanent_Address as "Permanent Address"
-							Date_of_Exit as "Date of Exit"
-						)
-					)
-				)
-
-				menu
-    			(
-    	 			header
-    	 			(
-    		 			Edit 
-    		 			Duplicate 
-    		 			Delete 
-    	 			)
-    			)
-			)
-		}
 	}
 	section ToDo_List1
 	{
@@ -5539,6 +5554,7 @@
 				custom action "Mark As Complete"
 				(
 	  			workflow = Mark_As_Complete
+				show action in view header = true
 				show action in edit record menu = true
 				column header = "Mark As Complete"
 				condition = (Status == "In Progress" || Status == "Overdue")
@@ -5547,11 +5563,13 @@
 				custom action "InProgress"
 				(
 	  			workflow = InProgress1
+				show action in view header = true
 				show action in edit record menu = true
 				column header = "InProgress"
 				condition = (Status == "Open" || Status == "Overdue")
 				)
 				Due_Date1 as "Start Date"
+				Due_Date as "Due Date"
 			)
 			filters
 			(
@@ -5561,6 +5579,10 @@
 				"In Progress Tasks"  :  Status == "In Progress"
 				"Overdue Tasks"  :  Status == "Overdue"
 			)
+			group by
+			(
+				Due_Date ascending
+			)
 			options
 			(
 				icon = "travel-world"
@@ -5569,6 +5591,14 @@
 			(
 				layout
 				(
+		 			customlayouts
+	     			(
+		 				template
+		 				(
+		 	  				displayname="Custom Layout 1"
+		 	  				content="<panel \n >\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		padding = '0px'\n	bgColor = '#FFFFFF'\n\n		width = '100%'\n		hAlign = 'center'\n		vAlign = 'middle'\n>\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		paddingTop = '17px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '30%'\n		hAlign = 'left'\n		vAlign = 'top'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Task_Name'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '17px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '33%'\n		hAlign = 'left'\n		vAlign = 'top'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Task_Owner'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '17px'\n	paddingLeft = '17px'\n	paddingRight = '0px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '37%'\n		hAlign = 'left'\n		vAlign = 'top'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '18'\n      	  numOfLines = '1'\n	  value = 'Status'\n>\n</text>\n\n</pc>\n</pr>\n</pc>\n</pr>\n</pc>\n</pr>\n</panel>"
+		    			)
+	     			)
 		 			type = -1
 					datablock1
 					(
@@ -6121,6 +6151,10 @@
 				Event_Status1
 				Event_Category
 			)
+			group by
+			(
+				Event_Category ascending
+			)
 			options
 			(
 				icon = "shopping-box-3d-67"
@@ -6129,6 +6163,14 @@
 			(
 				layout
 				(
+		 			customlayouts
+	     			(
+		 				template
+		 				(
+		 	  				displayname="Custom Layout 1"
+		 	  				content="<panel \n >\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		padding = '0px'\n	bgColor = '#FFFFFF'\n\n		width = '100%'\n		hAlign = 'center'\n		vAlign = 'middle'\n>\n	<pr \n			width='fill'\n		height='fill'\n>\n	<pc \n		paddingTop = '17px'\n	paddingLeft = '0px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '21%'\n		hAlign = 'left'\n		vAlign = 'top'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '16'\n      	  numOfLines = '1'\n	  value = 'Event_Name'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '17px'\n	paddingLeft = '0px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '27%'\n		hAlign = 'left'\n		vAlign = 'top'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '16'\n      	  numOfLines = '1'\n	  value = 'Event_Status1'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '17px'\n	paddingLeft = '0px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '23%'\n		hAlign = 'left'\n		vAlign = 'top'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '16'\n      	  numOfLines = '1'\n	  value = 'Start_Date'\n>\n</text>\n\n</pc>\n</pr>\n</pc><pc \n		paddingTop = '17px'\n	paddingLeft = '0px'\n	paddingRight = '17px'\n	paddingBottom = '17px'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n		width = '29%'\n		hAlign = 'left'\n		vAlign = 'top'\n>\n	<pr \n			width='auto'\n		height='auto'\n>\n	<pc \n	\n>\n	<text \n\n	color = '#000000'\n	size = '12px'\n	uppercase = 'false' \n	underline = 'false' \n	bold = 'false' \n	italic = 'false' \n	type = 'field'\n	bgColor = 'rgba(0, 0, 0, 0)'\n\n\n\n	  \n      	lineHeight = '16'\n      	  numOfLines = '1'\n	  value = 'End_Date'\n>\n</text>\n\n</pc>\n</pr>\n</pc>\n</pr>\n</pc>\n</pr>\n</panel>"
+		    			)
+	     			)
 		 			type = -1
 					datablock1
 					(
@@ -9337,7 +9379,7 @@
     			)
 			)
 		}
-		summary Employee_Birthday
+		list Employee_Birthday
 		{
 			displayName = "Employee Birthday"
    			hide = true
@@ -9349,19 +9391,16 @@
 			)
 			options
 			(
-				display rows = 10
-				display records per row = 2
 				icon = "business-business-contact-89"
-			)
+	 		)
 			quickview
 			(
 				layout
 				(
-		 			type = -2
-	     			recordsperrow = 2
+		 			type = -1
 					datablock1
 					(
-			 			layout type = -2
+			 			layout type = -1
 						fields
 						(
 							Type
@@ -11089,10 +11128,6 @@
 			)
 		}
 	}
-	section Add_Task
-	{
-		displayname= "Add Task"
-	}
 	section Approvers
 	{
 		icon = "tech-desktop"
@@ -11633,6 +11668,163 @@
 			)
 		}
 	}
+	section Job_Infos
+	{
+		displayname= "Job Infos"
+		icon = "users-2-a-time"
+		form Job_Info
+		{
+			displayname = "Job Info"
+			success message = "Job Info Added Successfully"
+			field alignment = left
+					hide = true
+			Section
+			(
+				type = section
+	 			row = 1
+	 			column = 0   
+				width = medium
+			)
+			Job_Id
+			(
+    			type = text
+				displayname = "Job Id"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Status
+			(
+				type = picklist
+				maxchar = 100
+				values = {"Open", "Closed"}
+				initial value = "Open"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+	
+			customize
+			(
+				icon = "users-2-a-time"
+			)
+			actions
+			{
+				on add
+				{
+					submit
+					(
+   						type = submit
+   						displayname = "Submit"
+					)
+					reset
+					(
+   						type = reset
+   						displayname = "Reset"
+					)
+				}
+				on edit
+				{
+					update
+					(
+   						type = submit
+   						displayname = "Update"
+					)
+					cancel
+					(
+   						type = cancel
+   						displayname = "Cancel"
+					)
+				}
+			}
+		}
+		default list All_Job_Infos
+		{
+			displayName = "All Job Infos"
+   			hide = true
+			show all rows from Job_Info    
+			(
+				Job_Id as "Job Id"
+				Status
+			)
+			options
+			(
+				icon = "education-award-55"
+	 		)
+			quickview
+			(
+				layout
+				(
+		 			type = -1
+					datablock1
+					(
+			 			layout type = -1
+						fields
+						(
+							Job_Id as "Job Id"
+							Status
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = -2
+						fields
+						(
+							Job_Id as "Job Id"
+							Status
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
+	}
 		 functions
 		 {
 			 Deluge
@@ -11733,12 +11925,17 @@
          	if(type == "Employee Time Off")
          	{
          		// redirect to employee time off
-         		openUrl("https://creatorapp.zoho.com/lifetimeepoxyutah/fms-app/record-summary/All_Leaves/" + add_act_obj.record_Id + "/","Popup window","height=500,width=500");
+         		openUrl("https://creatorapp.zoho.com/lifetimeepoxyutah/fms-app/record-summary/Leave_Approvals/" + add_act_obj.record_Id + "/","Popup window","height=500,width=500");
+         	}
+         	else if(type == "Task")
+         	{
+         		// redirect to employee time off
+         		openUrl("https://creatorapp.zoho.com/lifetimeepoxyutah/fms-app/record-summary/All_Open_Tasks/" + add_act_obj.record_Id + "/","Popup window","height=500,width=500");
          	}
          	else if(type == "Event")
          	{
          		// redirect to event
-         		openUrl("https://creatorapp.zoho.com/lifetimeepoxyutah/fms-app/record-summary/All_Events/" + add_act_obj.record_Id + "/","Popup window","height=500,width=500");
+         		openUrl("https://creatorapp.zoho.com/lifetimeepoxyutah/fms-app/record-summary/Open_Events/" + add_act_obj.record_Id + "/","Popup window","height=500,width=500");
          	}
          	else if(type == "Bank Holiday's")
          	{
@@ -11751,6 +11948,10 @@
          		openUrl("https://creatorapp.zoho.com/lifetimeepoxyutah/fms-app/record-summary/All_Jobs/" + add_act_obj.record_Id + "/","Popup window","height=500,width=500");
          	}
          	//https://creatorapp.zoho.com/lifetimeepoxyutah/fms-app/summary/All_Schedules/4264835000000204039
+         	else if(type == "Employee Birthday")
+         	{
+         		openUrl("https://creatorapp.zoho.com/lifetimeepoxyutah/fms-app/record-summary/Employee_Birthday/" + add_act_obj.record_Id + "/","Popup window","height=500,width=500");
+         	}
          }
 				 void time_logs.checin_check_out(Add_Schedule add_job_obj)
          {
@@ -11766,7 +11967,7 @@
          	close_currenttime = zoho.currenttime;
          	log_data.End_Time1=close_currenttime.toString();
          	hrs_cal = add_job_obj.Start_Date.hoursBetween(add_job_obj.Closing_Date);
-         	log_data.Hours=hrs_cal;
+         	log_data.Hours1=hrs_cal;
          }
 				 void time_logs.checin(Add_Schedule add_job_obj)
          {
@@ -11797,7 +11998,7 @@
          	close_currenttime = zoho.currenttime;
          	log_data.End_Time1=close_currenttime.toString();
          	hrs_cal = add_job_obj.Start_Date.hoursBetween(add_job_obj.Closing_Date);
-         	log_data.Hours=hrs_cal;
+         	log_data.Hours1=hrs_cal;
          }
 				 void EmployeeBirthday.Employee_Birthday()
          {
@@ -11806,14 +12007,33 @@
          }
 				 void Test.hrsbettween(int id)
          {
-         	start_time = '18-Dec-2019 09:30:00';
-         	end_time = '18-Dec-2019 10:00:00';
-         	mil_sec = (end_time - start_time);
-         	actual_minutes = mil_sec / (1000 * 60);
-         	mins = actual_minutes.toLong() % 60;
-         	hours = (actual_minutes / 60).toLong();
-         	time_string = hours + " : " + mins;
+         	// 	start_time = '18-Dec-2019 09:30:00';
+         	// 	end_time = '18-Dec-2019 09:35:00';
+         	// 	mil_sec = (end_time - start_time);
+         	// 	actual_minutes = mil_sec / (1000 * 60);
+         	// 	mins = actual_minutes.toLong() % 60;
+         	// 	hours = (actual_minutes / 60).toLong();
+         	// 	time_string = hours + " : " + mins;
          	// 	info time_string;
+         	Thursday_val = 0;
+         	Hours = '13:60';
+         	//13.4166666666666667
+         	or_time = Hours.toList(":");
+         	info "or_time" + or_time;
+         	hrs = or_time.get(0).toLong();
+         	info "hrs" + hrs;
+         	mins = or_time.get(1).toLong();
+         	info "mins" + mins;
+         	total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
+         	info "total_mins" + total_mins;
+         	Thursday_val = Thursday_val + total_mins;
+         	//info "Thursday_val"+Thursday_val;
+         	var = Thursday_val.toNumber();
+         	info "var" + var;
+         	hours_Thursday = var / 60;
+         	info "hours_Thursday" + hours_Thursday.round(0);
+         	// 	num = 5/60;
+         	// 	info num;
          }
 				 void Test.Dob_Test(int Id)
          {
@@ -11987,18 +12207,30 @@
 				 void Test.amformat(int id)
          {
          	data_val = Time_Logs[ID == id];
-         	date_time = data_val.Date_field.toString();
-         	from_time = data_val.From_Time.toString();
-         	start = date_time + " " + from_time;
-         	start_time = start.toTime();
-         	to_time = data_val.End_Time1.toString();
-         	end = date_time + " " + to_time;
-         	end_time = end.toTime();
-         	mil_sec = (end_time - start_time);
-         	actual_minutes = mil_sec / (1000 * 60);
-         	mins = actual_minutes % 60;
-         	hours = (actual_minutes / 60).toLong();
-         	time_string = hours + ":" + mins;
+         	// 	date_time = data_val.Date_field.toString();
+         	// 	from_time = data_val.From_Time.toString();
+         	// 	start = date_time + " " + from_time;
+         	// 	start_time = start.toTime();
+         	// 	to_time = data_val.End_Time1.toString();
+         	// 	end = date_time + " " + to_time;
+         	// 	end_time = end.toTime();
+         	// 	mil_sec = (end_time - start_time);
+         	// 	actual_minutes = mil_sec / (1000 * 60);
+         	// 	mins = actual_minutes % 60;
+         	// 	hours = (actual_minutes / 60).toLong();
+         	// 	time_string = hours + ":" + mins;
+         	time = data_val.Hours1;
+         	timeList = time.toList(":");
+         	hour = timeList.get(0).toNumber();
+         	minutes = timeList.get(1).toNumber();
+         	min = minutes * 60;
+         	total_min = min / 60;
+         	timeindecimal = hour + ":" + total_min;
+         	Hours = timeindecimal;
+         	info "timeList" + timeList;
+         	info "hour" + hour;
+         	info "minutes" + minutes;
+         	info "Hours" + Hours;
          }
 				 void recurringtype.Monthlytaskcreating(int id)
          {
@@ -12522,6 +12754,25 @@
          		}
          	}
          }
+				 void Test.updateto_crm(int id)
+         {
+         	// 		data_resp = Add_Schedule [ ID == id ];
+         	// 		deal_id = data_resp.Books_Id.toLong();
+         	// 		data_map = Map();
+         	//         data_map.put("Deal_Name",data_resp.Deal_Name);
+         	//         data_map.put("Email",data_resp.Email);
+         	//         data_map.put("Phone",data_resp.Phone_Number);
+         	//         data_map.put("Closing_Date",data_resp.Closing_Date);
+         	//         data_map.put("Start_Date",data_resp.Start_Date);
+         	//         data_map.put("Installation_Crew",data_resp.Installation_Crew);
+         	//         data_map.put("Flake_Color",data_resp.Flake_Color);
+         	//         data_map.put("Floor_Sq_Ft",data_resp.Floor_Sq_Ft);
+         	//         data_map.put("Stem_Walls_Stairs_Sq_Ft",data_resp.Stem_Walls_Stairs_Sq_Ft);
+         	//         data_map.put("Additional_Job_Notes",data_resp.Additional_Job_Notes);
+         	//         other_map = Map();
+         	//         update_record = zoho.crm.updateRecord("Deals",deal_id,data_map,other_map,"crm");
+         	//         info update_record;
+         }
 			 }
 		 }
 
@@ -13042,21 +13293,26 @@
 													if(date_of_day == 1)
 													{
 														info "sunday";
-														temp_hours = li_val.Hours;
-														or_time = li_val.Hours.toList(":");
+														temp_hours = li_val.Hours1;
+														or_time = li_val.Hours1.toList(":");
 														hrs = or_time.get(0).toLong();
 														mins = or_time.get(1).toLong();
-														total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
-														sunday_val = sunday_val + total_mins;
-														var = sunday_val.toNumber();
-														// 				total_hours = tuesday_val / 60;
-														hours_sunday = var / 60;
+														// 				total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
+														// 				sunday_val = sunday_val + total_mins;
+														// 				var = sunday_val.toNumber();
+														// 				// 				total_hours = tuesday_val / 60;
+														// 				hours_sunday = var / 60;
+														// 				info "hours_sunday"+hours_sunday;
+														min = mins * 60;
+														total_min = min / 60;
+														hours_sunday = hrs + ":" + total_min;
+														info "hours_sunday" + hours_sunday;
 													}
 													else if(date_of_day == 2)
 													{
 														info "monday";
-														temp_hours = li_val.Hours;
-														or_time = li_val.Hours.toList(":");
+														temp_hours = li_val.Hours1;
+														or_time = li_val.Hours1.toList(":");
 														hrs = or_time.get(0).toLong();
 														mins = or_time.get(1).toLong();
 														total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
@@ -13067,10 +13323,10 @@
 													}
 													else if(date_of_day == 3)
 													{
-														// 				info "tuesday";
-														temp_hours = li_val.Hours;
+														info "tuesday";
+														temp_hours = li_val.Hours1;
 														info temp_hours;
-														or_time = li_val.Hours.toList(":");
+														or_time = li_val.Hours1.toList(":");
 														hrs = or_time.get(0).toLong();
 														mins = or_time.get(1).toLong();
 														total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
@@ -13081,48 +13337,54 @@
 													else if(date_of_day == 4)
 													{
 														info "Wednesday";
-														temp_hours = li_val.Hours;
+														temp_hours = li_val.Hours1;
 														info temp_hours;
-														or_time = li_val.Hours.toList(":");
+														or_time = li_val.Hours1.toList(":");
 														hrs = or_time.get(0).toLong();
 														mins = or_time.get(1).toLong();
 														total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
 														Wednesday_val = Wednesday_val + total_mins;
-														var = Wednesday_val.toNumber();
+														var = Wednesday_val.toTime();
 														hours_Wednesday = var / 60;
 													}
 													else if(date_of_day == 5)
 													{
-														info "Thursday";
-														temp_hours = li_val.Hours;
-														info temp_hours;
-														or_time = li_val.Hours.toList(":");
+														//info "Thursday";
+														temp_hours = li_val.Hours1;
+														or_time = li_val.Hours1.toList(":");
+														//info "or_time"+or_time;
 														hrs = or_time.get(0).toLong();
+														//info "hrs"+hrs;
 														mins = or_time.get(1).toLong();
+														//info "mins"+mins;
 														total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
+														info "total_mins" + total_mins;
 														Thursday_val = Thursday_val + total_mins;
+														//info "Thursday_val"+Thursday_val;
 														var = Thursday_val.toNumber();
+														info "var" + var;
 														hours_Thursday = var / 60;
+														info "hours_Thursday" + hours_Thursday;
 													}
 													else if(date_of_day == 6)
 													{
 														info "Friday";
-														temp_hours = li_val.Hours;
+														temp_hours = li_val.Hours1;
 														info temp_hours;
-														or_time = li_val.Hours.toList(":");
+														or_time = li_val.Hours1.toList(":");
 														hrs = or_time.get(0).toLong();
 														mins = or_time.get(1).toLong();
 														total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
 														Friday_val = Friday_val + total_mins;
-														var = Friday_val.toNumber();
+														var = Friday_val.toTime();
 														hours_Friday = var / 60;
 													}
 													else if(date_of_day == 7)
 													{
 														info "Saturday";
-														temp_hours = li_val.Hours;
+														temp_hours = li_val.Hours1;
 														info temp_hours;
-														or_time = li_val.Hours.toList(":");
+														or_time = li_val.Hours1.toList(":");
 														hrs = or_time.get(0).toLong();
 														mins = or_time.get(1).toLong();
 														total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
@@ -13140,27 +13402,27 @@
 													}
 													else if(dayVal == 2)
 													{
-														row.Monday=hours_monday + ":00";
+														row.Monday=hours_monday;
 													}
 													else if(dayVal == 3)
 													{
-														row.Tuesday=hours_temp + ":00";
+														row.Tuesday=hours_temp;
 													}
 													else if(dayVal == 4)
 													{
-														row.Wednesday=hours_Wednesday + ":00";
+														row.Wednesday=hours_Wednesday;
 													}
 													else if(dayVal == 5)
 													{
-														row.Thursday=hours_Thursday + ":00";
+														row.Thursday=hours_Thursday;
 													}
 													else if(dayVal == 6)
 													{
-														row.Friday=hours_Friday + ":00";
+														row.Friday=hours_Friday;
 													}
 													else if(dayVal == 7)
 													{
-														row.Saturday=hours_Saturday + ":00";
+														row.Saturday=hours_Saturday;
 													}
 												}
 											}
@@ -13219,9 +13481,9 @@
 												}
 												if(existingLog.count() > 0)
 												{
-													if(existingLog.Hours != hrs)
+													if(existingLog.Hours1 != hrs)
 													{
-														existingLog.Hours=hrs;
+														existingLog.Hours1=hrs;
 													}
 												}
 												else
@@ -13236,7 +13498,7 @@
 															Added_User=zoho.loginuser
 															Job_Name=eachRow.Job_Name
 															Task=eachRow.Task
-															Hours=hrs
+															Hours1=hrs
 															From_Time="00:00"
 															End_Time1="00:00"
 															users=zoho.loginuser
@@ -13274,10 +13536,10 @@
 										hide Section1;
 										hide Clock_In;
 										hide Clock_Out;
-										//hide Hour;
+										hide Hours1;
 										disable Employee_Email;
 										hide Add_weekly_Logs;
-										hide Time_in_Hours;
+										//hide Time_in_Hours;
 										hide Emp_email;
 										hide Approver_Emails;
 										hide Log_Type;
@@ -13306,7 +13568,7 @@
 					}
 					actions  (Track_as == "Start & End")
 					{
-						show Hours,From_Time,End_Time1;
+						show From_Time,End_Time1,Hours;
 					}
 				}
 
@@ -13354,20 +13616,20 @@
 				record event = on add or edit
 					status = inactive
 
-				on user input of Hours
+				on user input of Hours1
 				{
 					actions 
 					{
 						custom deluge script
 						(
 											//Validating the time here
-										if(thisapp.TimeCalculations.timeValidation(input.Hours))
+										if(thisapp.TimeCalculations.timeValidation(input.Hours1))
 										{
-											hrsVal = input.Hours.getPrefix(":");
-											minsVal = input.Hours.getSuffix(":");
+											hrsVal = input.Hours1.getPrefix(":");
+											minsVal = input.Hours1.getSuffix(":");
 											if(hrsVal.length() < 2 || minsVal.length() < 2)
 											{
-												input.Hours = thisapp.TimeCalculations.getStringTime(hrsVal.toLong(),minsVal.toLong());
+												input.Hours1 = thisapp.TimeCalculations.getStringTime(hrsVal.toLong(),minsVal.toLong());
 											}
 										}
 										else
@@ -14417,195 +14679,195 @@
 													hours_Saturday = 0;
 													Friday_val = 0;
 													hours_Friday = 0;
-													for each  li_val in repeatedLogs
-													{
-														date_of_day = li_val.Date_field.getDayOfWeek();
-														// 				info date_of_day;
-														if(date_of_day == 1)
-														{
-															// 					info "sunday";
-															temp_hours = li_val.Hours;
-															or_time = li_val.Hours.toList(":");
-															hrs = or_time.get(0).toLong();
-															mins = or_time.get(1).toLong();
-															total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
-															sunday_val = sunday_val + total_mins;
-															var = sunday_val.toNumber();
-															// 				total_hours = tuesday_val / 60;
-															hours_sunday = var / 60;
-															if(hours_sunday < 10)
-															{
-																num_sun = "0" + hours_sunday;
-															}
-															else
-															{
-																hours_sunday = var / 60;
-																num_sun = hours_sunday;
-															}
-														}
-														else if(date_of_day == 2)
-														{
-															// 					info "monday";
-															temp_hours = li_val.Hours;
-															or_time = li_val.Hours.toList(":");
-															hrs = or_time.get(0).toLong();
-															mins = or_time.get(1).toLong();
-															total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
-															monday_val = monday_val + total_mins;
-															var = monday_val.toNumber();
-															// 				total_hours = tuesday_val / 60;
-															hours_monday = var / 60;
-															if(hours_monday < 10)
-															{
-																num_mon = "0" + hours_monday;
-															}
-															else
-															{
-																hours_monday = var / 60;
-																num_mon = hours_monday;
-															}
-														}
-														else if(date_of_day == 3)
-														{
-															// 				info "tuesday";
-															temp_hours = li_val.Hours;
-															// 					info temp_hours;
-															or_time = li_val.Hours.toList(":");
-															hrs = or_time.get(0).toLong();
-															mins = or_time.get(1).toLong();
-															total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
-															tuesday_val = tuesday_val + total_mins;
-															var = tuesday_val.toNumber();
-															hours_temp = var / 60;
-															if(hours_temp < 10)
-															{
-																num_temp = "0" + hours_temp;
-															}
-															// 					else 
-															//                     {
-															// 						hours_temp = var / 60;
-															// 						num_temp =hours_temp;
-															//                     }
-														}
-														else if(date_of_day == 4)
-														{
-															// 					info "Wednesday";
-															temp_hours = li_val.Hours;
-															// 					info temp_hours;
-															or_time = li_val.Hours.toList(":");
-															hrs = or_time.get(0).toLong();
-															mins = or_time.get(1).toLong();
-															total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
-															Wednesday_val = Wednesday_val + total_mins;
-															var = Wednesday_val.toNumber();
-															hours_Wednesday = var / 60;
-															if(hours_Wednesday < 10)
-															{
-																num_Wed = "0" + hours_Wednesday;
-															}
-															else
-															{
-																hours_Wednesday = var / 60;
-																num_Wed = hours_Wednesday;
-															}
-														}
-														else if(date_of_day == 5)
-														{
-															// 					info "Thursday";
-															temp_hours = li_val.Hours;
-															// 					info temp_hours;
-															or_time = li_val.Hours.toList(":");
-															hrs = or_time.get(0).toLong();
-															mins = or_time.get(1).toLong();
-															total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
-															Thursday_val = Thursday_val + total_mins;
-															var = Thursday_val.toNumber();
-															hours_Thursday = var / 60;
-															if(hours_Thursday < 10)
-															{
-																num_Thu = "0" + hours_Thursday;
-															}
-															else
-															{
-																hours_Thursday = var / 60;
-																num_Thu = hours_Thursday;
-															}
-														}
-														else if(date_of_day == 6)
-														{
-															// 					info "Friday";
-															temp_hours = li_val.Hours;
-															// 					info temp_hours;
-															or_time = li_val.Hours.toList(":");
-															hrs = or_time.get(0).toLong();
-															mins = or_time.get(1).toLong();
-															total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
-															Friday_val = Friday_val + total_mins;
-															var = Friday_val.toNumber();
-															hours_Friday = var / 60;
-															if(hours_Friday < 10)
-															{
-																num_Fri = "0" + hours_Friday;
-															}
-															else
-															{
-																hours_Friday = var / 60;
-																num_Fri = hours_Friday;
-															}
-														}
-														else if(date_of_day == 7)
-														{
-															// 					info "Saturday";
-															temp_hours = li_val.Hours;
-															// 					info temp_hours;
-															or_time = li_val.Hours.toList(":");
-															hrs = or_time.get(0).toLong();
-															mins = or_time.get(1).toLong();
-															total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
-															Saturday_val = Saturday_val + total_mins;
-															var = Saturday_val.toNumber();
-															hours_Saturday = var / 60;
-															if(hours_Saturday < 10)
-															{
-																num_Sat = "0" + hours_Saturday;
-															}
-															else
-															{
-																hours_Saturday = var / 60;
-																num_Sat = hours_Saturday;
-															}
-														}
-													}
+													// 			for each  li_val in repeatedLogs
+													// 			{
+													// 				date_of_day = li_val.Date_field.getDayOfWeek();
+													// 				// 				info date_of_day;
+													// 				if(date_of_day == 1)
+													// 				{
+													// 					// 					info "sunday";
+													// 					temp_hours = li_val.Hours;
+													// 					or_time = li_val.Hours.toList(".");
+													// 					hrs = or_time.get(0).toLong();
+													// 					mins = or_time.get(1).toLong();
+													// 					total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
+													// 					sunday_val = sunday_val + total_mins;
+													// 					var = sunday_val.toNumber();
+													// 					// 				total_hours = tuesday_val / 60;
+													// 					hours_sunday = var / 60;
+													// 					if(hours_sunday < 10)
+													// 					{
+													// 						num_sun = "0" + hours_sunday;
+													// 					}
+													// 					else
+													// 					{
+													// 						hours_sunday = var / 60;
+													// 						num_sun = hours_sunday;
+													// 					}
+													// 				}
+													// 				else if(date_of_day == 2)
+													// 				{
+													// 					// 					info "monday";
+													// 					temp_hours = li_val.Hours;
+													// 					or_time = li_val.Hours.toList(".");
+													// 					hrs = or_time.get(0).toLong();
+													// 					mins = or_time.get(1).toLong();
+													// 					total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
+													// 					monday_val = monday_val + total_mins;
+													// 					var = monday_val.toNumber();
+													// 					// 				total_hours = tuesday_val / 60;
+													// 					hours_monday = var / 60;
+													// 					if(hours_monday < 10)
+													// 					{
+													// 						num_mon = "0" + hours_monday;
+													// 					}
+													// 					else
+													// 					{
+													// 						hours_monday = var / 60;
+													// 						num_mon = hours_monday;
+													// 					}
+													// 				}
+													// 				else if(date_of_day == 3)
+													// 				{
+													// 					// 				info "tuesday";
+													// 					temp_hours = li_val.Hours;
+													// 					// 					info temp_hours;
+													// 					or_time = li_val.Hours.toList(".");
+													// 					hrs = or_time.get(0).toLong();
+													// 					mins = or_time.get(1).toLong();
+													// 					total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
+													// 					tuesday_val = tuesday_val + total_mins;
+													// 					var = tuesday_val.toNumber();
+													// 					hours_temp = var / 60;
+													// 					if(hours_temp < 10)
+													// 					{
+													// 						num_temp = "0" + hours_temp;
+													// 					}
+													// 					else
+													// 					{
+													// 						hours_temp = var / 60;
+													// 						num_temp = hours_temp;
+													// 					}
+													// 				}
+													// 				else if(date_of_day == 4)
+													// 				{
+													// 					// 					info "Wednesday";
+													// 					temp_hours = li_val.Hours;
+													// 					// 					info temp_hours;
+													// 					or_time = li_val.Hours.toList(".");
+													// 					hrs = or_time.get(0).toLong();
+													// 					mins = or_time.get(1).toLong();
+													// 					total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
+													// 					Wednesday_val = Wednesday_val + total_mins;
+													// 					var = Wednesday_val.toNumber();
+													// 					hours_Wednesday = var / 60;
+													// 					if(hours_Wednesday < 10)
+													// 					{
+													// 						num_Wed = "0" + hours_Wednesday;
+													// 					}
+													// 					else
+													// 					{
+													// 						hours_Wednesday = var / 60;
+													// 						num_Wed = hours_Wednesday;
+													// 					}
+													// 				}
+													// 				else if(date_of_day == 5)
+													// 				{
+													// 					// 					info "Thursday";
+													// 					temp_hours = li_val.Hours;
+													// 					// 					info temp_hours;
+													// 					or_time = li_val.Hours.toList(".");
+													// 					hrs = or_time.get(0).toLong();
+													// 					mins = or_time.get(1).toLong();
+													// 					total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
+													// 					Thursday_val = Thursday_val + total_mins;
+													// 					var = Thursday_val.toNumber();
+													// 					hours_Thursday = var / 60;
+													// 					if(hours_Thursday < 10)
+													// 					{
+													// 						num_Thu = "0" + hours_Thursday;
+													// 					}
+													// 					else
+													// 					{
+													// 						hours_Thursday = var / 60;
+													// 						num_Thu = hours_Thursday;
+													// 					}
+													// 				}
+													// 				else if(date_of_day == 6)
+													// 				{
+													// 					// 					info "Friday";
+													// 					temp_hours = li_val.Hours;
+													// 					// 					info temp_hours;
+													// 					or_time = li_val.Hours.toList(".");
+													// 					hrs = or_time.get(0).toLong();
+													// 					mins = or_time.get(1).toLong();
+													// 					total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
+													// 					Friday_val = Friday_val + total_mins;
+													// 					var = Friday_val.toNumber();
+													// 					hours_Friday = var / 60;
+													// 					if(hours_Friday < 10)
+													// 					{
+													// 						num_Fri = "0" + hours_Friday;
+													// 					}
+													// 					else
+													// 					{
+													// 						hours_Friday = var / 60;
+													// 						num_Fri = hours_Friday;
+													// 					}
+													// 				}
+													// 				else if(date_of_day == 7)
+													// 				{
+													// 					// 					info "Saturday";
+													// 					temp_hours = li_val.Hours;
+													// 					// 					info temp_hours;
+													// 					or_time = li_val.Hours.toList(".");
+													// 					hrs = or_time.get(0).toLong();
+													// 					mins = or_time.get(1).toLong();
+													// 					total_mins = ifnull(hrs,0) * 60 + ifnull(mins,0);
+													// 					Saturday_val = Saturday_val + total_mins;
+													// 					var = Saturday_val.toNumber();
+													// 					hours_Saturday = var / 60;
+													// 					if(hours_Saturday < 10)
+													// 					{
+													// 						num_Sat = "0" + hours_Saturday;
+													// 					}
+													// 					else
+													// 					{
+													// 						hours_Saturday = var / 60;
+													// 						num_Sat = hours_Saturday;
+													// 					}
+													// 				}
+													//}
 													for each  eachSameLog in repeatedLogs
 													{
 														dayVal = eachSameLog.Date_field.getDayOfWeek();
 														if(dayVal == 1)
 														{
-															row_insert.Sunday=num_sun + ":00";
+															row_insert.Sunday=eachSameLog.Hours.toString();
 														}
 														else if(dayVal == 2)
 														{
-															row_insert.Monday=num_mon + ":00";
+															row_insert.Monday=eachSameLog.Hours.toString();
 														}
 														else if(dayVal == 3)
 														{
-															row_insert.Tuesday=num_temp + ":00";
+															row_insert.Tuesday=eachSameLog.Hours.toString();
 														}
 														else if(dayVal == 4)
 														{
-															row_insert.Wednesday=num_Wed + ":00";
+															row_insert.Wednesday=eachSameLog.Hours.toString();
 														}
 														else if(dayVal == 5)
 														{
-															row_insert.Thursday=num_Thu + ":00";
+															row_insert.Thursday=eachSameLog.Hours.toString();
 														}
 														else if(dayVal == 6)
 														{
-															row_insert.Friday=num_Fri + ":00";
+															row_insert.Friday=eachSameLog.Hours.toString();
 														}
 														else if(dayVal == 7)
 														{
-															row_insert.Saturday=num_Sat + ":00";
+															row_insert.Saturday=eachSameLog.Hours.toString();
 														}
 													}
 													input.Logs.insert(row_insert);
@@ -15265,13 +15527,13 @@
 					{
 						custom deluge script
 						(
-											time = input.Hours;
+											time = input.Hours1;
 										timeList = time.toList(":");
 										hour = timeList.get(0).toNumber();
 										minutes = timeList.get(1).toNumber();
 										min = minutes / 60;
 										timeindecimal = hour + min;
-										input.Time_in_Hours = timeindecimal;
+										input.Hours = timeindecimal;
 										info timeList;
 										info hour;
 										info minutes;
@@ -15299,23 +15561,23 @@
 				form = Time_Logs
 				record event = on add or edit
 
-				on user input of Hours
+				on user input of Hours1
 				{
 					actions 
 					{
 						custom deluge script
 						(
-											time = input.Hours;
+											time = input.Hours1;
 										timeList = time.toList(":");
 										hour = timeList.get(0).toNumber();
 										minutes = timeList.get(1).toNumber();
 										min = minutes / 60;
 										timeindecimal = hour + min;
-										input.Time_in_Hours = timeindecimal;
-										// info timeList;
-										// info hour;
-										// info minutes;
-										// info timeindecimal;
+										input.Hours = timeindecimal;
+										// info "timeList" + timeList;
+										// info "hour" + hour;
+										// info "minutes" + minutes;
+										// info "timeindecimal" + timeindecimal;
 						)
 					}
 				}
@@ -15469,9 +15731,97 @@
 										actual_minutes = mil_sec / (1000 * 60);
 										mins = actual_minutes % 60;
 										hours = (actual_minutes / 60).toLong();
-										time_string = hours + ":" + mins;
+										time_string = hours + "." + mins;
 										input.Hours = time_string;
 						)
+					}
+				}
+
+			}
+			Task_Assignment_Notificat as "Task Assignment Notification"
+			{
+				type =  form
+				form = Add_Task
+				record event = on add
+
+				on success
+				{
+				}
+
+			}
+			Validation_on_negative_Va as "Validation on negative Values"
+			{
+				type =  form
+				form = Time_Logs
+				record event = on add or edit
+
+				on validate
+				{
+					actions 
+					{
+						custom deluge script
+						(
+											if(input.From_Time > input.End_Time1)
+										{
+											alert "Please Enter a Valid Time";
+											cancel submit;
+										}
+						)
+					}
+				}
+
+			}
+			job_update_to_CRM as "job update to CRM"
+			{
+				type =  form
+				form = Add_Schedule
+				record event = on edit
+
+				on success
+				{
+					actions 
+					{
+						custom deluge script
+						(
+											deal_id = input.Books_Id.toLong();
+										data_map = Map();
+										data_map.put("Deal_Name",input.Deal_Name);
+										data_map.put("Email",input.Email);
+										data_map.put("Phone",input.Phone_Number);
+										data_map.put("Closing_Date",input.Closing_Date);
+										data_map.put("Start_Date",input.Start_Date);
+										data_map.put("Installation_Crew",input.Installation_Crew);
+										data_map.put("Flake_Color",input.Flake_Color);
+										data_map.put("Floor_Sq_Ft",input.Floor_Sq_Ft);
+										data_map.put("Stem_Walls_Stairs_Sq_Ft",input.Stem_Walls_Stairs_Sq_Ft);
+										data_map.put("Additional_Job_Notes",input.Additional_Job_Notes);
+										other_map = Map();
+										update_record = zoho.crm.updateRecord("Deals",deal_id,data_map,other_map,"crm");
+										info update_record;
+						)
+					}
+				}
+
+			}
+			hide_fields4 as "hide fields"
+			{
+				type =  form
+				form = Add_Schedule
+				record event = on edit
+
+				field rules
+				{
+					actions 
+					{
+						hide Crew_Information;
+					}
+					actions 
+					{
+						disable Discount,Total,Balance_Due;
+					}
+					actions 
+					{
+					hide add row of Associated_Items,Line_Items;
 					}
 				}
 
@@ -15744,7 +16094,7 @@
 										close_currenttime = zoho.currenttime;
 										log_data.End_Time1=close_currenttime.toString();
 										hrs_cal = input.Start_Date.hoursBetween(input.Closing_Date);
-										log_data.Hours=hrs_cal;
+										log_data.Hours1=hrs_cal;
 										input.Status = "Completed";
 					)
 					}
@@ -15891,7 +16241,7 @@
 				{
 					actions 
 					{
-					redirect_activity(Add_Activities);
+						thisapp.redirect_activity(Add_Activities);
 					}
 				}
 			}
@@ -15946,7 +16296,7 @@
 										close_currenttime = zoho.currenttime;
 										log_data.End_Time1=close_currenttime.toString();
 										hrs_cal = input.Start_Date.hoursBetween(input.Closing_Date);
-										log_data.Hours=hrs_cal;
+										log_data.Hours1=hrs_cal;
 										input.Status = "Completed";
 					)
 					}
@@ -15960,7 +16310,7 @@
 				{
 					actions 
 					{
-					time_logs.checin_check_out(Add_Schedule);
+						thisapp.time_logs.checin_check_out(Add_Schedule);
 					}
 				}
 			}
@@ -15972,7 +16322,7 @@
 				{
 					actions 
 					{
-					time_logs.log_checkedOut(Add_Schedule);
+						thisapp.time_logs.log_checkedOut(Add_Schedule);
 					}
 				}
 			}
@@ -15984,7 +16334,7 @@
 				{
 					actions 
 					{
-					time_logs.checin(Add_Schedule);
+						thisapp.time_logs.checin(Add_Schedule);
 					}
 				}
 			}
@@ -15996,7 +16346,7 @@
 				{
 					actions 
 					{
-					time_logs.checkedOut(Add_Schedule);
+						thisapp.time_logs.checkedOut(Add_Schedule);
 					}
 				}
 			}
@@ -18043,6 +18393,10 @@
 							All_Work_Experiences={"View","Edit","Delete"}
 						}
 					}
+					Job_Info
+					{
+						allFieldsVisible= true 
+					}
 					Associate_Completed_Job
 					{
 						enabled= Create,Viewall,Modifyall,Import,Export,Tab 
@@ -18125,9 +18479,21 @@
 		new theme = 9
 		new theme color = 10
 		icons = true
+    	icon type = 3
+    	icon name = "LE"
+    	icon theme = "blue"
 		icons style = outline
 	}
 
+	connections
+	{
+		crm
+		(
+			displayname = "crm"
+			connector = zoho_oauth
+			permissions = {"ZohoCRM.bulk.ALL","ZohoCRM.bulk.READ","ZohoCRM.coql.READ","ZohoCRM.crmapi.ALL","ZohoCRM.files.CREATE","ZohoCRM.functions.execute.CREATE","ZohoCRM.functions.execute.READ","ZohoCRM.modules.ALL","ZohoCRM.modules.attachments.ALL","ZohoCRM.modules.notes.ALL","ZohoCRM.modules.notes.CREATE","ZohoCRM.modules.notes.DELETE","ZohoCRM.modules.notes.READ","ZohoCRM.modules.notes.WRITE","ZohoCRM.notifications.ALL","ZohoCRM.notifications.CREATE","ZohoCRM.notifications.DELETE","ZohoCRM.notifications.UPDATE","ZohoCRM.notifications.WRITE","ZohoCRM.org.ALL","ZohoCRM.org.READ","ZohoCRM.send_mail.accounts.CREATE","ZohoCRM.send_mail.all.CREATE","ZohoCRM.send_mail.cases.CREATE","ZohoCRM.send_mail.contacts.CREATE","ZohoCRM.send_mail.custom.CREATE","ZohoCRM.send_mail.deals.CREATE","ZohoCRM.send_mail.invoices.CREATE","ZohoCRM.send_mail.leads.CREATE","ZohoCRM.send_mail.purchaseorders.CREATE","ZohoCRM.send_mail.quotes.CREATE","ZohoCRM.send_mail.salesorders.CREATE","ZohoCRM.settings.ALL","ZohoCRM.settings.currencies.CREATE","ZohoCRM.settings.currencies.READ","ZohoCRM.settings.currencies.UPDATE","ZohoCRM.settings.custom_views.ALL","ZohoCRM.settings.custom_views.READ","ZohoCRM.settings.fields.ALL","ZohoCRM.settings.fields.READ","ZohoCRM.settings.layouts.ALL","ZohoCRM.settings.layouts.READ","ZohoCRM.settings.modules.ALL","ZohoCRM.settings.modules.READ","ZohoCRM.settings.profiles.ALL","ZohoCRM.settings.profiles.READ","ZohoCRM.settings.READ","ZohoCRM.settings.related_lists.ALL","ZohoCRM.settings.related_lists.READ","ZohoCRM.settings.roles.ALL"}
+		)
+	}
 
 	phone
 	{
@@ -18161,7 +18527,12 @@
 				icon = "education-flask"
 				hide = true
 			}
-			page Home1
+			page Time_Tracker_Widget
+			{
+				icon = "tech-2-p-system-update"
+				hide = true
+			}
+			page Org_Dashboard
 			{
 				icon = "business-board-28"
 			}
@@ -18169,13 +18540,13 @@
 			{
 				icon = "business-board-28"
 			}
-			page Org_Dashboard
+			page Home1
 			{
 				icon = "business-board-28"
 			}
-			page Time_Tracker_Widget
+			page google_calander
 			{
-				icon = "tech-2-p-system-update"
+				icon = "design-2-android"
 			}
 		}
 		section  Jobs1
@@ -18253,6 +18624,8 @@
 		     				title = "Overview"
 							fields
 							(
+				"Start Job"
+				"Complete Job"
 								Deal_Name as "Deal Name"
 								Client_Name as "Client Name"
 								Phone_Number as "Phone"
@@ -18381,6 +18754,8 @@
 		     				title = "Overview"
 							fields
 							(
+				"Start Job"
+				"Complete Job"
 								Deal_Name as "Deal Name"
 								Client_Name as "Client Name"
 								Phone_Number as "Phone"
@@ -18453,6 +18828,11 @@
 		section  Organization
 		{
 			icon = "users-2-a-add"
+			calendar Employee_Birthdays
+			{
+				icon = "business-handshake"
+				hide = true
+			}
 			calendar Calendar_View
 			{
 				icon = "ui-1-calendar-60"
@@ -18477,11 +18857,6 @@
 			calendar Bank_Holidays
 			{
 				icon = "ui-1-calendar-60"
-				hide = true
-			}
-			calendar Employee_Birthdays
-			{
-				icon = "business-handshake"
 				hide = true
 			}
 		}
@@ -18535,8 +18910,6 @@
 									(
 										"Approve"
 										"Send Back For Review"
-										Delete   	   
-										Edit   	   
     								)
     				)
     				action
@@ -18547,9 +18920,8 @@
     								)
 									on long press
 									(
-										Edit   	   
-										Delete   	   
-										Duplicate   	   
+										"Approve"
+										"Send Back For Review"
 										View Record   	   
     								)
      				)
@@ -18568,7 +18940,7 @@
 								Description
 								Date_field as "Date"
 								Track_as as "Track as"
-								Hours
+								Hours1 as "Hours"
 								Status
 								Add_weekly_Logs as "Add weekly Logs"
 							)
@@ -18582,8 +18954,6 @@
 			 				"Approve"
 			 				"Send Back For Review"
     		 				Edit 
-    		 				Duplicate 
-    		 				Delete 
     	 				)
     				)
 				)
@@ -18632,7 +19002,7 @@
 								Job_Name as "Job Name"
 								Task
 								Description
-								Hours
+								Hours1 as "Hours"
 							)
 						)
 					)
@@ -18709,7 +19079,7 @@
 								Job_Name as "Job Name"
 								Task
 								Description
-								Hours
+								Hours1 as "Hours"
 							)
 						)
 					)
@@ -18779,7 +19149,7 @@
 								Job_Name as "Job Name"
 								Task
 								Description
-								Hours
+								Hours1 as "Hours"
 							)
 						)
 					)
@@ -18813,13 +19183,14 @@
 				icon = "tech-2-p-add"
 				hide = true
 			}
-			spreadsheet All_Crews
-			{
-				icon = "users-multiple-11"
-			}
 			list Crews_History
 			{
 				icon = "tech-2-p-time"
+				hide = true
+			}
+			spreadsheet All_Crews
+			{
+				icon = "users-multiple-11"
 			}
 		}
 		section  Employees
@@ -19070,6 +19441,71 @@
 			{
 				icon = "design-window-paragraph"
 				hide = true
+				quickview
+				(
+					layout
+					(
+		 				type = Custom
+		 				selectedlayout = "Custom Layout 1"
+					)
+
+					menu
+    				(
+    	 				header
+    	 				(
+    	 				)
+									record
+									(
+										"Approve"
+    								)
+    				)
+    				action
+    				(
+									on tap
+									(
+										View Record   	   
+    								)
+									on long press
+									(
+										"Approve"
+										View Record   	   
+    								)
+     				)
+				)
+				detailview
+				(
+					layout
+					(
+		 				type = 1
+						datablock1
+						(
+			 				layout type = -2
+							fields
+							(
+				"Approve"
+								Employee1 as "Employee"
+								Total_Day_s as "Total Day(s)"
+								Leave_Type as "Leave Type"
+								Type
+								Form_Date as "Form Date"
+								To_Date as "To Date"
+								Reason_for_leave as "Leave Description"
+								Date_field as "Date submitted"
+								Status
+								Leave_Taken_By as "Leave Taken Sofar"
+								Employee_Email as "Employee Email"
+							)
+						)
+					)
+
+					menu
+    				(
+    	 				header
+    	 				(
+			 				"Approve"
+    	 				)
+    				)
+				)
 			}
 			list Approved_Leaves
 			{
@@ -19297,6 +19733,78 @@
 			{
 				icon = "shopping-box-3d-67"
 				hide = true
+				quickview
+				(
+					layout
+					(
+		 				type = Custom
+		 				selectedlayout = "Custom Layout 1"
+					)
+
+					menu
+    				(
+    	 				header
+    	 				(
+    		 				Edit 
+    		 				Duplicate 
+    		 				Delete 
+    	 				)
+									record
+									(
+										Edit   	   
+										Duplicate   	   
+										Delete   	   
+    								)
+    				)
+    				action
+    				(
+									on tap
+									(
+										View Record   	   
+    								)
+									on long press
+									(
+										Edit   	   
+										Delete   	   
+										Duplicate   	   
+										View Record   	   
+    								)
+     				)
+				)
+				detailview
+				(
+					layout
+					(
+		 				type = 1
+						datablock1
+						(
+			 				layout type = -2
+							fields
+							(
+								Event_Image as "Event Image"
+								Event_Category as "Event Category"
+								Event_Name as "Event Name"
+								Venue
+								Start_Date as "Start Date"
+								Start_Time as "Start Time"
+								End_Date as "End Date"
+								End_Time as "End Time"
+								Discription as "Event Description"
+								Event_Status1 as "Event Status"
+							)
+						)
+					)
+
+					menu
+    				(
+    	 				header
+    	 				(
+    		 				Edit 
+    		 				Duplicate 
+    		 				Delete 
+    	 				)
+    				)
+				)
 			}
 			form  Add_Event
 			{
@@ -19371,7 +19879,7 @@
 				icon = "business-bank"
 				hide = true
 			}
-			summary Employee_Birthday
+			list Employee_Birthday
 			{
 				icon = "business-business-contact-89"
 				hide = true
@@ -19463,6 +19971,82 @@
 			{
 				icon = "travel-world"
 				hide = true
+				quickview
+				(
+					layout
+					(
+		 				type = Custom
+		 				selectedlayout = "Custom Layout 1"
+					)
+
+					menu
+    				(
+    	 				header
+    	 				(
+    		 				Edit 
+    		 				Duplicate 
+    		 				Delete 
+    	 				)
+									record
+									(
+										"InProgress"
+										"Mark As Complete"
+										Edit   	   
+										Duplicate   	   
+										Delete   	   
+    								)
+    				)
+    				action
+    				(
+									on tap
+									(
+										View Record   	   
+    								)
+									on long press
+									(
+										Edit   	   
+										Delete   	   
+										Duplicate   	   
+										View Record   	   
+    								)
+     				)
+				)
+				detailview
+				(
+					layout
+					(
+		 				type = 1
+						datablock1
+						(
+			 				layout type = -2
+							fields
+							(
+				"InProgress"
+				"Mark As Complete"
+								Task_Owner as "Task Owner"
+								Task_Name as "Task Name"
+								Due_Date1 as "Start Date"
+								End_Date as "End Date"
+								Description
+								Priority
+								Status
+								Assign_to as "Assigned To"
+							)
+						)
+					)
+
+					menu
+    				(
+    	 				header
+    	 				(
+			 				"InProgress"
+			 				"Mark As Complete"
+    		 				Edit 
+    		 				Duplicate 
+    		 				Delete 
+    	 				)
+    				)
+				)
 			}
 			list Open_Tasks1
 			{
@@ -19580,12 +20164,28 @@
 			calendar Task
 			{
 				icon = "design-todo"
+				hide = true
+			}
+		}
+		section  Job_Infos
+		{
+			displayname= "Job Infos"
+			form  Job_Info
+			{
+				layout = auto
+				icon = "users-2-a-time"
+				hide = true
+			}
+			list All_Job_Infos
+			{
+				icon = "education-award-55"
+				hide = true
 			}
 		}
 		customize
 		{
 			colour = turquoise
-        	layout = tabbar
+        	layout = onecolumn
 		 	icons style = outline
 		}
 	}
@@ -19593,7 +20193,7 @@
 	reports configuration
 	{
 	
-		Version = 1251000233298333
-		Key     = "ybrAXYtg23ake0xhRk0vT0mTTAVYRYtsSU63g9mgFmt4uKDYA4KYSQqVzMOtpdCSj5EeGksTxaNZy9kmVvd6JUvqwRPOkH17Ra2h"
+		Version = 1251000235808615
+		Key     = "4Sf0RNXtD2uMw11QJQHkN9YVkVaKWTNEkhOFGd4M4rNamGRKq6WWxUz6qEr3MAXPBQvSdPHWPjjXVthkOu9JJSBmaPUWfVtyABDW"
 	}
 }
