@@ -1,0 +1,16 @@
+deal_data = zoho.crm.getRecordById("Deals",deal_id);
+Search_rec_job = zoho.creator.getRecords("lifetimeepoxyutah","fms-app","All_Jobs","Books_Id == \"" + deal_id + "\"",1,200,"creator");
+creator_job_resp = Search_rec_job.get("data");
+for each  creator_job_id in creator_job_resp
+{
+	creator_jobid = creator_job_id.get("ID");
+	info creator_jobid;
+}
+delete_rec = invokeurl
+[
+	url :"https://creatorapp.zoho.com/api/v2/lifetimeepoxyutah/fms-app/report/All_Jobs/" + creator_jobid
+	type :DELETE
+	parameters:creator_jobid
+	connection:"creator"
+];
+info delete_rec;
