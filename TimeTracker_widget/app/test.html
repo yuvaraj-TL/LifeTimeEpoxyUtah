@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table class="table line_items">
+      <tr class="line_item">
+        <td id="Courier_data" width="400px;">
+        <!-- <select id="ddlFruits"> -->
+          	<select class="form-select ddlFruits" aria-label="Default select example">
+    <option value=""></option>
+    <option value="1">Apple</option>
+    <option value="2">Mango</option>
+    <option value="3">Orange</option>
+</select> 
+        </td>
+    	</tr>
+   </table>
+
+<!-- <select id="ddlFruits">
+    <option value=""></option>
+    <option value="1">Apple</option>
+    <option value="2">Mango</option>
+    <option value="3">Orange</option>
+</select> -->
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".ddlFruits").change(function () {
+            var selectedText = $(this).find("option:selected").text();
+            var selectedValue = $(this).val();
+            $(this).find("option:selected").attr("value","qwer");
+            alert("Selected Text: " + selectedText + " Value: " + selectedValue);
+
+
+            
+            let end_time="31-May-2022 4:25:24";
+            let start_time="30-May-2022 13:51:24";
+            var diff =  Math.abs(new Date(end_time) - new Date(start_time));
+							var seconds = Math.floor(diff/1000); //ignore any left over units smaller than a second
+							var minutes = Math.floor(seconds/60); 
+							seconds = seconds % 60;
+							var hours = Math.floor(minutes/60);
+							minutes = minutes % 60;
+
+							minutes = ('0'+minutes).slice(-2);
+							hours = ('0'+hours).slice(-2);
+
+
+							alert("Diff = " + hours + ":" + minutes + ":" + seconds);
+        });
+
+    });
+</script>
+</html>

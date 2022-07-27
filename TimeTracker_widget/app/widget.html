@@ -1,0 +1,613 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <div style="width: 50px; height: 100px; align-content: center;"></div>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://js.zohostatic.com/creator/widgets/version/1.0/widgetsdk-min.js"></script> 
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <style>
+    body{
+        background-color: #ecf0f1;
+    }
+    .invoice-box {
+        max-width: 400px;
+        margin: auto;
+        padding: 55px;
+        border: 1px solid #eee;
+        /*box-shadow: 0 0 10px rgba(0, 0, 0, .15);*/
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #0d0d0d;
+        /*background: #f5fafa;*/
+        
+    }
+     .invoice-box table {
+        width: 100%;
+        line-height: inherit;
+        text-align: left;
+    }
+    .invoice-box table td {
+        padding: 5px;
+        vertical-align: top;
+    }
+    .invoice-box table tr td:nth-child(5) {
+        text-align: right;
+    }
+    .invoice-box table tr.top table td {
+        padding-bottom: 20px;
+    }
+    .invoice-box table tr.top table td.title {
+        font-size: 45px;
+        line-height: 45px;
+        color: #333;
+    }
+    .invoice-box table tr.information table td {
+        padding-bottom: 40px;
+    }
+    .invoice-box table tr.heading td {
+        background: #eee;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+    }
+    invoice-box table tr.details td {
+        padding-bottom: 20px;
+    }
+    .invoice-box table tr.Services td{
+        border-bottom: 1px solid #eee;
+    }
+    .invoice-box table tr.Services.last td {
+        border-bottom: none;
+    }   
+    @media only screen and (max-width: 600px) {
+        .invoice-box table tr.top table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+            .invoice-box table tr.information table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    }
+    table.table td, table.table th, table.table tr{
+      border:none !important;
+    }
+
+    .modal-busy {
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: Black;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    -moz-opacity: 0.8;
+    }
+    .center-busy {
+        z-index: 1000;
+        margin: 300px auto;
+        padding: 0px;
+        width: 130px;
+
+        filter: alpha(opacity=100);
+        opacity: 1;
+        -moz-opacity: 1;
+    }
+    .page_load{
+        border: 14px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 14px solid #aacc38;
+      border-bottom: 14px solid #aacc38;
+      width: 80px;
+      height: 80px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  </head>
+  <body>
+    <div class="invoice-box">
+    <br>
+    <table>
+    </table>
+    
+    <table class="table line_items">
+      <tr class="line_item">
+        <td id="Courier_data" width="50px;">
+          <input type="text" class="form-control" name="user_name" id="user_name" record_id="" email="" value=""  hidden>
+          <input type="text" class="form-control" name="utc_val" id="utc_val" value=""  hidden>
+          <input type="text" class="form-control" log_time_id="" name="log_status" id="log_status" value="" hidden >
+        </td>
+        <td id="courier_val">
+          <div style="/*float: left;*/ /*padding-left:10px*/; padding-right: 20px; padding-top: 0px;">
+            <button id="clock_in" class="clock_in btn btn-primary" style="width: 170px; background-color: #07a377;">Clock IN</button>
+          </div>
+          <div style="float: left; padding-right: 20px; padding-top: 10px;">
+            <button type="button" id="clock_out" class="btn btn-dark btn-md btn-block clock_out" style="width: 170px; background-color: #07a377;">Clock OUT</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="modal fade bd-example-modal-sm" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Clock OUT</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <table class="table clock_out_rec">
+                <tbody>
+                  <tr>
+                    <td style="font-weight: 600;">Job Name</td>
+                    <td>
+                      <select class="form-select deal_val" aria-label="Default select example">
+                        <option selected disabled value="">Select Deal</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 600;">Task Name</td>
+                    <td class="task_name">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="deal_name" aria-describedby="emailHelp" placeholder="Task Name">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 600;">Description</td>
+                    <td class="description">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Description">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 600;">Users</td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="users" aria-describedby="emailHelp" placeholder="Users" value="" readonly="true">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary confirm" data-dismiss="modal">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-busy" id="loader" style="display: none;">
+  <div class="center-busy" id="test-git">
+    <div class="page_load" id="page_load"></div>
+  </div>
+</div>
+</body>
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".clock_out").hide();
+    ZOHO.CREATOR.init().then(function(){
+      var query_params = ZOHO.CREATOR.UTIL.getQueryParams();
+      var email = query_params.email;
+      $("#user_name").attr("value",email);
+
+      var emp_config = {
+          reportName: "My_Profile",
+          page: 1,
+          pageSize: 200
+        }
+      ZOHO.CREATOR.API.getAllRecords(emp_config).then(function (response) {
+        console.log("response:",response);
+        let response_data=response.data;
+        for(var rec_arr in response_data)
+        {
+          let Email_address =response_data[rec_arr].ID;
+          $("#user_name").attr("email",Email_address);
+
+        }
+      });
+
+      inv_config = {
+        reportName: "All_Time_Logs",
+        id: "4264835000000498011"
+      }
+      ZOHO.CREATOR.API.getRecordById(inv_config).then(function (single_response) {
+        console.log("single time response",single_response);
+      });
+
+
+
+
+      // $("#users").val(email);
+      console.log("email",email);
+      var job_config = {
+          reportName: "All_Job_Infos",
+          page: 1,
+          pageSize: 200
+        }
+      ZOHO.CREATOR.API.getAllRecords(job_config).then(function (response) {
+        console.log("response:",response);
+        let response_data=response.data;
+        console.log("response_data",response_data);
+        for(var rec_arr in response_data)
+        {
+          let record_id =response_data[rec_arr].ID;
+          console.log("record_id",record_id);
+          // let user_name="lifetimeepoxyutah";
+          let status=response_data[rec_arr].Status;
+          let log_time_id=response_data[rec_arr].Job_Id;
+          $("#user_name").attr("record_id",record_id);
+          $("#log_status").attr("value",status);
+          $("#log_status").attr("log_time_id",log_time_id);
+          let log_status=$("#log_status").val();
+          console.log("log_status",log_status);
+          if (log_status=="Open") 
+          {
+            $(".clock_out").hide();
+            $(".clock_in").show();
+          }
+          else
+          {
+            $(".clock_out").show();
+            $(".clock_in").hide(); 
+          }
+        }
+      }).catch(function(error){
+        console.log("It is in Catch Method");
+        console.log(error);
+        });
+    });
+    $(".clock_in").click(function(){
+      $('#loader').show();
+
+      let recordID=$("#user_name").attr("record_id");
+      let user=$("#user_name").val();
+      let emp_id=$("#user_name").attr("email");
+      console.log("user",user);
+      ZOHO.CREATOR.init().then(function () {
+        var query_params = ZOHO.CREATOR.UTIL.getQueryParams();
+        var newDate = new Date();
+        var formattedDate = moment().format('DD-MMM-YYYY');
+        // var time = newDate.getHours() + ":" + newDate.getMinutes();
+
+        var time=newDate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+        console.log("time",time);
+        let date_time=formattedDate+' '+time;
+        formdata = {
+          "data": {
+            "Employee_Email":emp_id,
+            "Date_field":formattedDate,
+            // "users":"lifetimeepoxyutah",
+            "users":user,
+            "Track_as":"Start & End",
+            "From_Time":time
+          }
+        };
+          console.log("formdata:",formdata);
+
+          let inv_config2 = {
+                formName: "Time_Logs",
+                data: formdata
+              };
+          ZOHO.CREATOR.API.addRecord(inv_config2).then(function (response) {
+            console.log("response",response);
+            if (response.code==3000)
+            {
+              let time_log_id=response.data.ID;
+              $("#log_status").attr("log_time_id",time_log_id);
+              console.log("time_log_id",time_log_id);
+              form_data = {
+                "data":{
+                        "ID": recordID,
+                        "Job_Id":time_log_id,
+                        "Status": "Closed"
+                      }
+                    };
+              console.log("form_data",form_data);
+              var config = { 
+                appName : "fms-app",
+                reportName : "All_Job_Infos",
+                id : recordID,
+                data : form_data
+              }
+              console.log("config",config);
+
+              ZOHO.CREATOR.API.updateRecord(config).then(function(response){
+                if(response.code == 3000){
+                  console.log("response",response);
+                $('#loader').hide();
+                 $(".clock_out").show();
+                 $(".clock_in").hide();
+               }
+             });
+            }
+          });
+      });
+    });
+    $(".clock_out").click(function(){
+      $('#loader').show();
+      let user_name_val=$("#user_name").val();
+      console.log("user_name_val",user_name_val);
+      $("#users").val(user_name_val);
+
+
+        ZOHO.CREATOR.init().then(function(){
+        var query_params = ZOHO.CREATOR.UTIL.getQueryParams();
+
+        for (var i = 1; i <=5; i++)
+        {
+          var ship_config = {
+            reportName: "My_Jobs",
+            criteria: '(Log_Status != "Completed")',
+            page: i,
+            pageSize: 200
+          }
+          // console.log("ship_config",ship_config);
+          ZOHO.CREATOR.API.getAllRecords(ship_config).then(function (response) {
+            console.log("response:",response);
+            var recordArr = response.data;
+            var res_code=response.code;
+            if (res_code==3000)
+            {
+              for(var indexval in recordArr)
+              {
+                let deal_name=recordArr[indexval].Deal_Name;
+                let record_id=recordArr[indexval].ID;
+                let log_status=recordArr[indexval].Log_Status;
+                let record_val=record_id+"&"+log_status;
+                $('.deal_val').append($('<option>',
+                {
+                  value: record_val,
+                  text : deal_name
+                }));
+                $('#loader').hide();
+                $('#exampleModal').modal('show');
+              }
+            }
+            }).catch(function(error){
+              // console.log("It is in Catch Method");
+              // console.log(error);
+              });
+        }
+      });
+    });
+
+    $(".confirm").click(function(){
+      $('#loader').show();
+      // console.log("confirm Button clicked");
+      var selectedText = $(".deal_val").find("option:selected").val();
+      console.log("selectedText:",selectedText);
+      var split_data = selectedText.split('&');
+      let recordID=split_data[0];
+      let log_time_id= $("#log_status").attr("log_time_id");
+      let user_name=$(".clock_out_rec #users").val();
+      let job_name=$(".clock_out_rec #job_name").text();
+      let description=$(".clock_out_rec #description").val();
+      let task_name=$(".clock_out_rec #deal_name").val();
+      let user_id=$("#user_name").attr("record_id");
+      console.log("user_name:",user_name); 
+
+      var newDate = new Date();
+      var formattedDate = moment().format('DD-MMM-YYYY');
+      // var time = newDate.getHours() + ":" + newDate.getMinutes();
+      var time=newDate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+      let end_time=formattedDate+' '+time;
+      
+
+        // console.log("formdata:",formdata);
+        ZOHO.CREATOR.init().then(function () {
+        var query_params = ZOHO.CREATOR.UTIL.getQueryParams();
+
+        inv_config = {
+            reportName: "All_Time_Logs",
+            id: log_time_id
+            }
+        ZOHO.CREATOR.API.getRecordById(inv_config).then(function (single_response) {
+          console.log("single response",single_response);
+          let date=single_response.data.Date_field;
+          let time1=single_response.data.From_Time; 
+          let start_time =date+" "+time1; 
+          var diff =  Math.abs(new Date(end_time) - new Date(start_time));
+          var seconds = Math.floor(diff/1000); //ignore any left over units smaller than a second
+          var minutes = Math.floor(seconds/60); 
+          seconds = seconds % 60;
+          var hours = Math.floor(minutes/60);
+          minutes = minutes % 60;
+          let minutes1 = ('0'+minutes).slice(-2);
+          hours = ('0'+hours).slice(-2);
+          let dif_hours=hours +":"+ minutes1;
+          // alert("Diff = " + hours + ":" + minutes + ":" + seconds); 
+
+          lines=[];
+          let temp_obj={
+            "Job_Name":recordID,
+            "Task_Name":task_name,
+            "Description":description,
+            "users":user_id,
+            // "users":"lifetimeepoxyutah",
+            "End_Time":end_time
+        }
+        lines.push(temp_obj);
+        lines1=[];
+          let temp_obj1={
+            "Job_Name":recordID,
+            "Task_Name":task_name,
+            "Description":description,
+            "users":user_id,
+            "Start_Time":start_time
+        }
+        lines1.push(temp_obj1);
+
+        formdata = {
+          "data": {
+              "ID":log_time_id,
+              "Task":task_name,
+              "Description":description,
+              "Job_Name":recordID,
+              "users":"lifetimeepoxyutah",
+              "Task": task_name,
+              "Description": description,
+              "Clock_Out":lines,
+              "Clock_In":lines1,
+              "End_Time1":time,
+              "Hours":dif_hours
+              
+            }
+          };
+          console.log("formdata:",formdata);
+
+          var config = { 
+                appName : "fms-app",
+                reportName : "All_Time_Logs",
+                // formName: "Add_Schedule", 
+                id : log_time_id,
+                data : formdata
+          }
+          ZOHO.CREATOR.API.updateRecord(config).then(function(response){
+            console.log("response",response);
+            if(response.code == 3000){
+
+              let clock_in_id=response.data.ID;
+
+              var ship_config1 = {
+                reportName: "Clock_Out_Report",
+                criteria: '(Time_Logs_Id.ID == '+clock_in_id+')',
+                page: 1,
+                pageSize: 200
+              }
+
+              ZOHO.CREATOR.API.getAllRecords(ship_config1).then(function (response1) {
+                console.log("response clock_in",response1);
+                let clock_rec1=response1.data;
+                for ( var clock_out in clock_rec1)
+                {
+                  let clock_id1=clock_rec1[clock_out].ID;
+                  clock_out = {
+                    "data":{
+                        "ID": clock_id1,
+                        "users":user_name
+                      }
+                    };
+                  var config1 = { 
+                    appName : "fms-app",
+                    reportName : "Clock_Out_Report",
+                    id : clock_id1,
+                    data : clock_out
+                  }
+
+                  ZOHO.CREATOR.API.updateRecord(config1).then(function(response){
+                  if(response.code == 3000){
+                    console.log("Record updated successfully");
+                  }
+                });
+                }
+              });
+
+
+              var ship_config = {
+                reportName: "Clock_In_Report",
+                criteria: '(Time_Logs_Id.ID == '+clock_in_id+')',
+                page: 1,
+                pageSize: 200
+              }
+              console.log("ship_config",ship_config);
+              ZOHO.CREATOR.API.getAllRecords(ship_config).then(function (response) {
+                console.log("response clock_in",response);
+                let clock_rec=response.data;
+                for ( var clock_in in clock_rec)
+                {
+                  let clock_id=clock_rec[clock_in].ID;
+                  clock_data = {
+                    "data":{
+                        "ID": clock_id,
+                        "users":user_name
+                      }
+                    };
+                  var config = { 
+                    appName : "fms-app",
+                    reportName : "Clock_In_Report",
+                    id : clock_id,
+                    data : clock_data
+                  }
+                  ZOHO.CREATOR.API.updateRecord(config).then(function(response){
+                    if(response.code == 3000){
+                      console.log("Record updated successfully");
+                    }
+                  });
+
+                }
+              });
+
+              let recordID=$("#user_name").attr("record_id");
+
+
+
+              form_data = {
+                "data":{
+                        "ID": recordID,
+                        "Job_Id":"",
+                        "Status": "Open"
+                      }
+                    };
+              console.log("form_data",form_data);
+              var config1 = { 
+                appName : "fms-app",
+                reportName : "All_Job_Infos",
+                id : recordID,
+                data : form_data
+              }
+            }
+
+            ZOHO.CREATOR.API.updateRecord(config1).then(function(response){
+                if(response.code == 3000){
+                  console.log("response",response);
+                  $('#loader').hide();
+                 $(".clock_out").hide();
+                 $(".clock_in").show();
+               }
+             });
+
+          });
+        });
+        });
+    });
+
+  });
+</script>
+</html>
